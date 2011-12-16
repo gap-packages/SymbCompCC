@@ -1,0 +1,5 @@
+SymbCompCC-1.2/doc/manual.pdf
+SymbCompCC-1.2/doc/make_doc
+SymbCompCC-1.2/doc/manual.dvi
+SymbCompCC-1.2/doc/convert.pl
+SymbCompCC-1.2/gap/PPowerPolyPcpGroups/ppowerpolypcpgroups.gi~
