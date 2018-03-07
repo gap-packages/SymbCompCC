@@ -1,14 +1,5 @@
 #!/bin/sh
-#############################################################################
-##
-#W  make_doc  make SymbCompCC Package documentation   Dörte Feichtenschlager
-##
-#H  $Id: make_doc, v 0.5 2010/05/31 09:30:00 gap SymbCompCC $
-##
-##  This shell script uses TeX, BibTeX and MakeIndex to build the .dvi, Adobe
-##  PDF, PostScript (commented out) and  HTML  (provided  you  have  tth  and
-##  etc/convert.pl) documentation for the SymbCompCC Package.
-##
+set -e
 
 echo "TeXing documentation"
 # TeX the manual
@@ -19,15 +10,14 @@ bibtex manual
 tex manual #; ../../../doc/manualindex manual
 # Finally TeX the manual again to get cross-references right
 tex manual
-# Create the PostScript version (uncomment next line, if needed)
-#dvips -D300 manual -o
 # Create PDF version
 pdftex manual; pdftex manual 
 
 # The HTML version of the manual
-mkdir -p ../htm
+rm -rf ../htm
+mkdir ../htm
 echo "Creating HTML documentation"
-../../../etc/convert.pl -u -c -n SymbCompCC . ../htm
+../../../etc/convert.pl -i -u -c -n SymbCompCC . ../htm
 
 #############################################################################
 ##
