@@ -1,102 +1,74 @@
 #############################################################################
 ##  
-##  Demo PackageInfo.g for the GitHubPagesForGAP
-##
+##  PackageInfo.g for the package "SymbCompCC"       Dörte Feichtenschlager
+##  
 
 SetPackageInfo( rec(
+PackageName := "SymbCompCC",
+Subtitle := "Computing with parametrised presentations for p-groups of fixed coclass",
+Version := "1.2",
+Date := "19/11/2011",
 
-PackageName := "GitHubPagesForGAP",
+ArchiveURL := Concatenation( [
+          "http://www.icm.tu-bs.de/ag_algebra/software/feichten/SymbCompCC/SymbCompCC-", ~.Version] ),
 
-Subtitle := "A GitHub Pages generator for GAP packages",
-Version := "0.2",
-Date := "04/02/2017", # dd/mm/yyyy format
+##  All provided formats as list of file extensions, separated by white
+##  space or commas.
+ArchiveFormats := ".tar.bz2, .tar.gz",
 
 Persons := [
-  rec(
-    LastName      := "Horn",
-    FirstNames    := "Max",
+  rec( 
+    LastName      := "Feichtenschlager",
+    FirstNames    := "Dörte",
     IsAuthor      := true,
     IsMaintainer  := true,
-    Email         := "max.horn@math.uni-giessen.de",
-    WWWHome       := "http://www.quendi.de/math",
-    PostalAddress := Concatenation(
-                       "AG Algebra\n",
-                       "Mathematisches Institut\n",
-                       "Justus-Liebig-Universität Gießen\n",
-                       "Arndtstraße 2\n",
-                       "35392 Gießen\n",
-                       "Germany" ),
-    Place         := "Gießen",
-    Institution   := "Justus-Liebig-Universität Gießen"
-  ),
-
-  rec(
-    LastName      := "Thor",
-    FirstNames    := "A. U.",
-    IsAuthor      := true,
-    IsMaintainer  := false,
-    #Email         := "author@example.com",
-  ),
-
-  rec(
-    LastName      := "Itor",
-    FirstNames    := "Jan",
-    IsAuthor      := false,
-    IsMaintainer  := true,
-    #Email         := "janitor@example.com",
-  ),
+    Email         := "d.feichtenschlager@tu-braunschweig.de",
+    #WWWHome       := "",
+    PostalAddress := Concatenation([
+                     "Institut Computational Mathematics\n",
+                     "TU Braunschweig\n",
+                     "Pockelsstr. 14 \n D-38106 Braunschweig \n Germany"] ),
+    Place         := "Braunschweig",
+    Institution   := "TU Braunschweig"
+  )
 ],
 
-Status := "other",
+Status := "accepted",
+CommunicatedBy := "Mike Newman (Canberra, Australia)",
+AcceptDate := "11/2011",
 
-# The following are not strictly necessary in your own PackageInfo.g
-# (in the sense that update.g only looks at the usual fields
-# like PackageWWWHome, ArchiveURL etc.). But they are convenient
-# if you use exactly the scheme for your package website that we propose.
-GithubUser := "gap-system",
-GithubRepository := ~.PackageName,
-GithubWWW := Concatenation("https://github.com/", ~.GithubUser, "/", ~.GithubRepository),
-
-PackageWWWHome := Concatenation("https://", ~.GithubUser, ".github.io/", ~.GithubRepository, "/"),
-README_URL     := Concatenation( ~.PackageWWWHome, "README.md" ),
-PackageInfoURL := Concatenation( ~.PackageWWWHome, "PackageInfo.g" ),
-# The following assumes you are using the Github releases system. If not, adjust
-# it accordingly.
-ArchiveURL     := Concatenation(~.GithubWWW,
-                    "/releases/download/v", ~.Version, "/",
-                    ~.GithubRepository, "-", ~.Version),
-
-ArchiveFormats := ".tar.gz .tar.bz2",
+README_URL := 
+  "http://www.icm.tu-bs.de/ag_algebra/software/feichten/SymbCompCC/README",
+PackageInfoURL := 
+  "http://www.icm.tu-bs.de/ag_algebra/software/feichten/SymbCompCC/PackageInfo.g",
 
 AbstractHTML := 
-  "This is a pseudo package that contains no actual\
-  <span class=\"pkgname\">GAP</span> code. Instead, it is a template for other\
-  GAP packages that allows to quickly setup GitHub Pages.",
+  "The <span class=\"pkgname\">SymbCompCC</span> package computes with parametrised presentations for finite p-groups of fixed coclass.",
 
+PackageWWWHome := "http://www.icm.tu-bs.de/ag_algebra/software/SymbCompCC",
+               
 PackageDoc := rec(
-  BookName  := "GitHubPagesForGAP",
-  ArchiveURLSubset := ["doc"],
-  HTMLStart := "doc/chap0.html",
-  PDFFile   := "doc/manual.pdf",
-  SixFile   := "doc/manual.six",
-  LongTitle := "A GitHub Pages generator for GAP packages",
+BookName  := "SymbCompCC",
+ArchiveURLSubset := ["doc", "htm"],
+HTMLStart := "htm/chapters.htm",
+PDFFile   := "doc/manual.pdf",
+SixFile   := "doc/manual.six",
+LongTitle := "SymbCompCC/Symbolic computation with p-groups of fixed coclass",
+Autoload  := false
 ),
 
-# The following dependencies are fake and for testing / demo purposes
 Dependencies := rec(
-  GAP := ">=4.8.1",
-  NeededOtherPackages := [
-    ["GAPDoc", ">= 1.2"],
-    ["IO", ">= 4.1"],
-  ],
-  SuggestedOtherPackages := [["orb", ">= 4.2"]],
+  GAP := ">=4.5",
+  NeededOtherPackages := [["polycyclic", ">= 2.2"]],
   ExternalConditions := []
 ),
 
 AvailabilityTest := ReturnTrue,
+BannerString := Concatenation( "Loading SymbCompCC ",
+                               String( ~.Version ), " ...\n" ),
+Autoload := false,
 
-Keywords := ["GitHub Pages", "GAP"]
+Keywords := ["parametrised presentations for p-groups of fixed coclass and calculations with these"]
 
 ));
-
 
