@@ -1,6 +1,6 @@
 #############################################################################
 ##
-#W    init.g            The SymbCompCC package        Dörte Feichtenschlager
+#W    init.g            The SymbCompCC package        DÃ¶rte Feichtenschlager
 ##
 
 #############################################################################

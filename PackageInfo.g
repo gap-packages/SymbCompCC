@@ -1,6 +1,6 @@
 #############################################################################
 ##  
-##  PackageInfo.g for the package "SymbCompCC"       Dörte Feichtenschlager
+##  PackageInfo.g for the package "SymbCompCC"       DÃ¶rte Feichtenschlager
 ##  
 
 SetPackageInfo( rec(
@@ -19,7 +19,7 @@ ArchiveFormats := ".tar.bz2, .tar.gz",
 Persons := [
   rec( 
     LastName      := "Feichtenschlager",
-    FirstNames    := "Dörte",
+    FirstNames    := "DÃ¶rte",
     IsAuthor      := true,
     IsMaintainer  := true,
     Email         := "d.feichtenschlager@tu-braunschweig.de",

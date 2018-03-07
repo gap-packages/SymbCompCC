@@ -1,6 +1,6 @@
 #############################################################################
 ##
-#W    read.g               The SymbCompCC package     Dörte Feichtenschlager
+#W    read.g               The SymbCompCC package     DÃ¶rte Feichtenschlager
 ##
 
 #############################################################################
