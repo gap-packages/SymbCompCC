@@ -29,10 +29,6 @@ DeclareOperation( "UnLocSmithNFPPowerPoly", [ IsRecord ] );
 DeclareOperation( "UnLocSmithNFPPowerPolyCol", [ IsRecord ] );
 DeclareOperation( "SchurMultiplicatorsStructurePPPPcps", [ IsPPPPcpGroups ]);
 
-if VERSION < "4.5.0" then ;
-else DeclareOperation( "SchurMultiplicator", [ IsPPPPcpGroups ] );
-fi;
-
 DeclareOperation( "ZeroCohomologyPPPPcps", [ IsPPPPcpGroups, IsInt ] );
 DeclareOperation( "ZeroCohomologyPPPPcps", [ IsPPPPcpGroups ] );
 DeclareOperation( "FirstCohomologyPPPPcps", [ IsPPPPcpGroups, IsInt ] );

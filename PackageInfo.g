@@ -58,7 +58,7 @@ Autoload  := false
 ),
 
 Dependencies := rec(
-  GAP := ">=4.4",
+  GAP := ">=4.5",
   NeededOtherPackages := [["polycyclic", ">= 2.2"]],
   ExternalConditions := []
 ),
