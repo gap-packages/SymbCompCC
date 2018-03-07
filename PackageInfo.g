@@ -9,13 +9,6 @@ Subtitle := "Computing with parametrised presentations for p-groups of fixed coc
 Version := "1.2",
 Date := "19/11/2011",
 
-ArchiveURL := Concatenation( [
-          "http://www.icm.tu-bs.de/ag_algebra/software/feichten/SymbCompCC/SymbCompCC-", ~.Version] ),
-
-##  All provided formats as list of file extensions, separated by white
-##  space or commas.
-ArchiveFormats := ".tar.bz2, .tar.gz",
-
 Persons := [
   rec( 
     LastName      := "Feichtenschlager",
@@ -37,15 +30,18 @@ Status := "accepted",
 CommunicatedBy := "Mike Newman (Canberra, Australia)",
 AcceptDate := "11/2011",
 
-README_URL := 
-  "http://www.icm.tu-bs.de/ag_algebra/software/feichten/SymbCompCC/README",
-PackageInfoURL := 
-  "http://www.icm.tu-bs.de/ag_algebra/software/feichten/SymbCompCC/PackageInfo.g",
-
-AbstractHTML := 
-  "The <span class=\"pkgname\">SymbCompCC</span> package computes with parametrised presentations for finite p-groups of fixed coclass.",
-
-PackageWWWHome := "http://www.icm.tu-bs.de/ag_algebra/software/SymbCompCC",
+PackageWWWHome  := "https://gap-packages.github.io/SymbCompCC/",
+README_URL      := Concatenation( ~.PackageWWWHome, "README" ),
+PackageInfoURL  := Concatenation( ~.PackageWWWHome, "PackageInfo.g" ),
+SourceRepository := rec(
+    Type := "git",
+    URL := "https://github.com/gap-packages/SymbCompCC",
+),
+IssueTrackerURL := Concatenation( ~.SourceRepository.URL, "/issues" ),
+ArchiveURL      := Concatenation( ~.SourceRepository.URL,
+                                 "/releases/download/v", ~.Version,
+                                 "/SymbCompCC-", ~.Version ),
+ArchiveFormats := ".tar.gz",
                
 PackageDoc := rec(
 BookName  := "SymbCompCC",
