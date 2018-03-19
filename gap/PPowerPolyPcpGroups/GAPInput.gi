@@ -1,6 +1,6 @@
 ###############################################################################
 ##
-#F GAPInput.gi            The SymbCompCC package     Dörte Feichtenschlager
+#F GAPInput.gi            The SymbCompCC package     DÃ¶rte Feichtenschlager
 ##
 
 ###############################################################################

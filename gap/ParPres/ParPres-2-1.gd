@@ -1,6 +1,6 @@
 ###############################################################################
 ##
-#F ParPres-2-1.gd            The SymbCompCC package     Dörte Feichtenschlager
+#F ParPres-2-1.gd            The SymbCompCC package     DÃ¶rte Feichtenschlager
 ##
 
 ###############################################################################

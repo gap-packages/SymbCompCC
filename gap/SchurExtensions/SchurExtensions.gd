@@ -1,6 +1,6 @@
 ###############################################################################
 ##
-#F SchurExtension.gd         The SymbCompCC package     Dörte Feichtenschlager
+#F SchurExtension.gd         The SymbCompCC package     DÃ¶rte Feichtenschlager
 ##
 
 ###############################################################################

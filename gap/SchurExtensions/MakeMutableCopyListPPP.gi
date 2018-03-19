@@ -1,6 +1,6 @@
 ###############################################################################
 ##
-#F MakeMutableCopyListPPP.gi  The SymbCompCC package    Dörte Feichtenschlager
+#F MakeMutableCopyListPPP.gi  The SymbCompCC package    DÃ¶rte Feichtenschlager
 ##
 
 ###############################################################################

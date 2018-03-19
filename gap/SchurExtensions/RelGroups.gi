@@ -1,6 +1,6 @@
 ###############################################################################
 ##
-#F RelGroups.gi            The SymbCompCC package     Dörte Feichtenschlager
+#F RelGroups.gi            The SymbCompCC package     DÃ¶rte Feichtenschlager
 ##
 
 ###############################################################################

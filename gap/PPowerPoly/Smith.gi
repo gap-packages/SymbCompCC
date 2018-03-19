@@ -1,6 +1,6 @@
 ###############################################################################
 ##
-#F Smith.gi            The SymbCompCC package          Dörte Feichtenschlager
+#F Smith.gi            The SymbCompCC package          DÃ¶rte Feichtenschlager
 ##
 
 ###############################################################################

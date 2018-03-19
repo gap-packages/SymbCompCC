@@ -1,6 +1,6 @@
 ###############################################################################
 ##
-#F LatexInput.gi            The SymbCompCC package     Dörte Feichtenschlager
+#F LatexInput.gi            The SymbCompCC package     DÃ¶rte Feichtenschlager
 ##
 
 ###############################################################################

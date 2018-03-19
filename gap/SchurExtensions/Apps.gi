@@ -1,6 +1,6 @@
 ###############################################################################
 ##
-#F Apps.gi            The SymbCompCC package     Dörte Feichtenschlager
+#F Apps.gi            The SymbCompCC package     DÃ¶rte Feichtenschlager
 ##
 
 ###############################################################################

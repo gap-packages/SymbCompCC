@@ -1,6 +1,6 @@
 ###############################################################################
 ##
-#F Props.gi           The SymbCompCC package     Dörte Feichtenschlager
+#F Props.gi           The SymbCompCC package     DÃ¶rte Feichtenschlager
 ##
 
 ###############################################################################

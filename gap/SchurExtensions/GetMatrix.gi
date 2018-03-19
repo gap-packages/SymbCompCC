@@ -1,6 +1,6 @@
 ###############################################################################
 ##
-#F GetMatrix.gi            The SymbCompCC package     Dörte Feichtenschlager
+#F GetMatrix.gi            The SymbCompCC package     DÃ¶rte Feichtenschlager
 ##
 
 ###############################################################################

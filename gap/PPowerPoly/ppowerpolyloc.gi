@@ -1,6 +1,6 @@
 ###############################################################################
 ##
-#F ppowerpolyloc.gi          The SymbCompCC package     Dörte Feichtenschlager
+#F ppowerpolyloc.gi          The SymbCompCC package     DÃ¶rte Feichtenschlager
 ##
 
 ###############################################################################

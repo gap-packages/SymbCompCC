@@ -1,6 +1,6 @@
 ###############################################################################
 ##
-#F ppowerpolypcpgroups.gi     The SymbCompCC package     Dörte Feichtenschlager
+#F ppowerpolypcpgroups.gi     The SymbCompCC package     DÃ¶rte Feichtenschlager
 ##
 
 ###############################################################################

@@ -1,6 +1,6 @@
 ###############################################################################
 ##
-#F ppowerpoly.gd            The SymbCompCC package     Dörte Feichtenschlager
+#F ppowerpoly.gd            The SymbCompCC package     DÃ¶rte Feichtenschlager
 ##
 
 ###############################################################################
