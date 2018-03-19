@@ -27,7 +27,7 @@ DeclareOperation( "GetPcpGroupPPowerPoly", [ IsRecord, IsInt ] );
 DeclareOperation( "GetPcpGroupPPowerPoly",[IsPPPPcpGroups,IsInt]);
 DeclareOperation( "UnLocSmithNFPPowerPoly", [ IsRecord ] );
 DeclareOperation( "UnLocSmithNFPPowerPolyCol", [ IsRecord ] );
-DeclareOperation( "SchurMultiplicatorsStructurePPPPcps", [ IsPPPPcpGroups ]);
+DeclareOperation( "SchurMultiplicatorPPPPcps", [ IsPPPPcpGroups ]);
 
 DeclareOperation( "ZeroCohomologyPPPPcps", [ IsPPPPcpGroups, IsInt ] );
 DeclareOperation( "ZeroCohomologyPPPPcps", [ IsPPPPcpGroups ] );

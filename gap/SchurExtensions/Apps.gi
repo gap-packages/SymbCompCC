@@ -5,14 +5,14 @@
 
 ###############################################################################
 ##
-## SchurMultiplicatorsStructurePPPPcps( ParPres )
+## AbelianInvariantsMultiplier( ParPres )
 ##
 ## Input: p-power-poly-pcp-groups ParPres
 ##
 ## Output: a list, describing the structure of the Schur multiplicators / 
 ##         multipliers of ParPres
 ##
-InstallMethod(SchurMultiplicatorsStructurePPPPcps,[IsPPPPcpGroups], 
+InstallMethod(AbelianInvariantsMultiplier, [ IsPPPPcpGroups ],
    function( ParPres )
       local p, cc, name, pos, expo_vec, m, SchurMult, l_sm, i, Zero0, S, One1;
 
@@ -82,14 +82,14 @@ InstallMethod(SchurMultiplicatorsStructurePPPPcps,[IsPPPPcpGroups],
 
 ###############################################################################
 ##
-## SchurMultiplicator( ParPres )
+## SchurMultiplicatorPPPPcps( ParPres )
 ##
 ## Input: p-power-poly-pcp-groups ParPres
 ##
 ## Output: a list, describing the structure of the Schur multiplicators / 
 ##         multipliers of ParPres
 ##
-InstallMethod( SchurMultiplicator, true, [ IsPPPPcpGroups ], 0, 
+InstallMethod( SchurMultiplicatorPPPPcps, [ IsPPPPcpGroups ],
    function( G )
       local SchurMult, SchurMultParPres, Zero0, One1, i, j, rel;
 
@@ -98,7 +98,7 @@ InstallMethod( SchurMultiplicator, true, [ IsPPPPcpGroups ], 0,
       fi;
 
       ## get the structure describtion of the Schur Multiplier
-      SchurMult := SchurMultiplicatorsStructurePPPPcps( G );
+      SchurMult := AbelianInvariantsMultiplier( G );
 
       ## initalize
       SchurMultParPres := rec( prime := G!.prime );

@@ -214,7 +214,7 @@ InstallMethod( SecondCohomologyPPPPcps, [ IsPPPPcpGroups, IsInt ], 0,
 
       ##
       Ab := AbelianInvariants( grp_pres );
-      Schur := SchurMultiplicatorsStructurePPPPcps( grp_pres );
+      Schur := AbelianInvariantsMultiplier( grp_pres );
       coho := [];
 
       for i in [1..Length( Ab )] do

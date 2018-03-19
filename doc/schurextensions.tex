@@ -112,7 +112,7 @@ rec( prime := 2,
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \Section{Computing other invariants from Schur extensions}
 
-\>SchurMultiplicatorsStructurePPPPcps( <G> ) F
+\>AbelianInvariantsMultiplier( <G> ) F
 
 computes the abelian invariants of the Schur multiplicators <M(G)> of the
 <p>-power-poly-pcp-groups <G>. The output is a list $[d_1, ..., d_k]$
@@ -122,11 +122,11 @@ $M(G) \cong C_{d_1} \times \ldots \times C_{d_k}$.
 \beginexample
 gap> G := PPPPcpGroups( ParPresGlobalVar_2_1[1] );
 < P-Power-Poly pcp-groups with 3 generators of relative orders [ 2,2,2*2^x ] >
-gap> SchurMultiplicatorsStructurePPPPcps( G );
+gap> AbelianInvariantsMultiplier( G );
 [ 2 ]
 \endexample
 
-\>SchurMultiplicator( <G> )!{for p-power-poly-pcp-groups} F
+\>SchurMultiplicatorPPPPcps( <G> )!{for p-power-poly-pcp-groups} F
 
 computes the Schur multiplicators of the <p>-power-poly-pcp-groups <G> and 
 then returns the corresponding 
@@ -138,7 +138,7 @@ then returns the corresponding
 \beginexample
 gap> G := PPPPcpGroup( ParPresGlobalVar_3_1[1] );
 < P-Power-Poly pcp-group with 5 generators of relative orders [ 3,3,3,3*3^x,3*3^x ] >
-gap> SchurMultiplicator( G );
+gap> SchurMultiplicatorPPPPcps( G );
 < P-Power-Poly pcp-groups with 2 generators of relative orders [ 3,9*3^x ] >
 \endexample
 
