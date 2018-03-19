@@ -75,32 +75,32 @@ rec( prime := 2,
 <h2><a name="SECT002">5.2 Computing other invariants from Schur extensions</a></h2>
 <p><p>
 <a name = "SSEC002.1"></a>
-<li><code>SchurMultiplicatorsStructurePPPPcps( </code><var>G</var><code> ) F</code>
+<li><code>AbelianInvariantsMultiplier( </code><var>G</var><code> ) F</code>
 <p>
-computes the abalian invariants of the Schur multiplicators <var>M(G)</var> of the 
-<var>p</var>-power-poly-pcp-groups <var>G</var>. The output is a list [<i>d</i><sub>1</sub>, &#183;.&#183;, <i>d</i><sub><i>k</i></sub>] 
+computes the abelian invariants of the Schur multiplicators <var>M(G)</var> of the
+<var>p</var>-power-poly-pcp-groups <var>G</var>. The output is a list [<i>d</i><sub>1</sub>, &#183;.&#183;, <i>d</i><sub><i>k</i></sub>]
 consisting elements <i>d</i><sub><i>i</i></sub>, depending on the underlying parameter, such that 
 <i>M</i>(<i>G</i>)  &#8773; <i>C</i><sub><i>d</i><sub>1</sub></sub> &times;&#8230;&times;<i>C</i><sub><i>d</i><sub><i>k</i></sub></sub>.
 <p>
 <pre>
 gap&gt; G := PPPPcpGroups( ParPresGlobalVar_2_1[1] );
-&lt; P-Power-Poly pcp-groups with 3 generators of relative orders [ 2,2,2*2^x ] &gt;
-SchurMultiplicatorsStructurePPPPcps( G );
+&lt; P-Power-Poly-pcp-groups with 3 generators of relative orders [ 2,2,2*2^x ] &gt;
+gap&gt; AbelianInvariantsMultiplier( G );
 [ 2 ]
 </pre>
 <p>
 <a name = "SSEC002.2"></a>
-<li><code>SchurMultiplicator( </code><var>G</var><code> ) F</code>
+<li><code>SchurMultiplicatorPPPPcps( </code><var>G</var><code> ) F</code>
 <p>
 computes the Schur multiplicators of the <var>p</var>-power-poly-pcp-groups <var>G</var> and 
 then returns the corresponding 
 <a href="CHAP003.htm#SSEC002.1">PPPPcpGroups</a>.
 <p>
 <pre>
-gap&gt; G := PPPPcpGroup( ParPresGlobalVar_3_1[1] );
+gap&gt; G := PPPPcpGroups( ParPresGlobalVar_3_1[1] );
 &lt; P-Power-Poly pcp-group with 5 generators of relative orders [ 3,3,3,3*3^x,3*3^x ] &gt;
-gap&gt; SchurMultiplicator( G );
-&lt; P-Power-Poly pcp-groups with 2 generators of relative orders [ 3,9*3^x ] &gt;
+gap&gt; SchurMultiplicatorPPPPcps( G );
+&lt; P-Power-Poly-pcp-groups with 2 generators of relative orders [ 3,9*3^x ] &gt;
 </pre>
 <p>
 <a name = "SSEC002.3"></a>
@@ -111,7 +111,7 @@ them as a list of list describing the parametrised elements.
 <p>
 <pre>
 gap&gt; G := PPPPcpGroups( ParPresGlobalVar_2_1[1] );
-&lt; P-Power-Poly pcp-groups with 3 generators of relative orders [ 2,2,2*2^x ] &gt;
+&lt; P-Power-Poly-pcp-groups with 3 generators of relative orders [ 2,2,2*2^x ] &gt;
 gap&gt; AbelianInvariants( G );
 [ 2, 2 ]
 </pre>
@@ -127,7 +127,7 @@ is interpreted as <b>Z</b>.
 <p>
 <pre>
 gap&gt; G := PPPPcpGroups( ParPresGlobalVar_2_1[1] );
-&lt; P-Power-Poly pcp-groups with 3 generators of relative orders [ 2,2,2*2^x ] &gt;
+&lt; P-Power-Poly-pcp-groups with 3 generators of relative orders [ 2,2,2*2^x ] &gt;
 gap&gt; ZeroCohomologyPPPPcp( G, 2 );
 [ 2 ]
 </pre>
@@ -143,7 +143,7 @@ is interpreted as <b>Z</b>.
 <p>
 <pre>
 gap&gt; G := PPPPcpGroups( ParPresGlobalVar_2_1[1] );
-&lt; P-Power-Poly pcp-groups with 3 generators of relative orders [ 2,2,2*2^x ] &gt;
+&lt; P-Power-Poly-pcp-groups with 3 generators of relative orders [ 2,2,2*2^x ] &gt;
 gap&gt; FirstCohomologyPPPPcps( G );
 [  ]
 </pre>
@@ -159,7 +159,7 @@ is interpreted as <b>Z</b>.
 <p>
 <pre>
 gap&gt; G := PPPPcpGroups( ParPresGlobalVar_2_1[1] );
-&lt; P-Power-Poly pcp-groups with 3 generators of relative orders [ 2,2,2*2^x ] &gt;
+&lt; P-Power-Poly-pcp-groups with 3 generators of relative orders [ 2,2,2*2^x ] &gt;
 gap&gt; SecondCohomologyPPPPcps( G, 2 );
 [ 2, 2, 2 ]
 </pre>
