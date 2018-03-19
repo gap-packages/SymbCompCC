@@ -114,15 +114,15 @@ rec( prime := 2,
 
 \>SchurMultiplicatorsStructurePPPPcps( <G> ) F
 
-computes the abalian invariants of the Schur multiplicators <M(G)> of the 
-<p>-power-poly-pcp-groups <G>. The output is a list $[d_1, ..., d_k]$ 
+computes the abelian invariants of the Schur multiplicators <M(G)> of the
+<p>-power-poly-pcp-groups <G>. The output is a list $[d_1, ..., d_k]$
 consisting elements $d_i$, depending on the underlying parameter, such that 
 $M(G) \cong C_{d_1} \times \ldots \times C_{d_k}$.
 
 \beginexample
 gap> G := PPPPcpGroups( ParPresGlobalVar_2_1[1] );
 < P-Power-Poly pcp-groups with 3 generators of relative orders [ 2,2,2*2^x ] >
-SchurMultiplicatorsStructurePPPPcps( G );
+gap> SchurMultiplicatorsStructurePPPPcps( G );
 [ 2 ]
 \endexample
 
