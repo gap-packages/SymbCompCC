@@ -1,7 +1,7 @@
 #############################################################################
-##  
+##
 ##  PackageInfo.g for the package "SymbCompCC"       Dörte Feichtenschlager
-##  
+##
 
 SetPackageInfo( rec(
 PackageName := "SymbCompCC",
@@ -10,7 +10,7 @@ Version := "1.3dev",
 Date := "19/11/2011",
 
 Persons := [
-  rec( 
+  rec(
     LastName      := "Feichtenschlager",
     FirstNames    := "Dörte",
     IsAuthor      := true,
@@ -23,7 +23,15 @@ Persons := [
                      "Pockelsstr. 14 \n D-38106 Braunschweig \n Germany"] ),
     Place         := "Braunschweig",
     Institution   := "TU Braunschweig"
-  )
+  ),
+
+  rec(
+    LastName      := "GAP Team",
+    FirstNames    := "The",
+    IsAuthor      := false,
+    IsMaintainer  := true,
+    Email         := "support@gap-system.org",
+  ),
 ],
 
 Status := "accepted",
@@ -42,7 +50,10 @@ ArchiveURL      := Concatenation( ~.SourceRepository.URL,
                                  "/releases/download/v", ~.Version,
                                  "/SymbCompCC-", ~.Version ),
 ArchiveFormats := ".tar.gz",
-               
+
+AbstractHTML :=
+  "The <span class=\"pkgname\">SymbCompCC</span> package computes with parametrised presentations for finite p-groups of fixed coclass.",
+
 PackageDoc := rec(
 BookName  := "SymbCompCC",
 ArchiveURLSubset := ["doc", "htm"],
@@ -54,15 +65,12 @@ Autoload  := false
 ),
 
 Dependencies := rec(
-  GAP := ">=4.5",
-  NeededOtherPackages := [["polycyclic", ">= 2.2"]],
+  GAP := ">=4.7",
+  NeededOtherPackages := [["polycyclic", ">= 2.11"]],
   ExternalConditions := []
 ),
 
 AvailabilityTest := ReturnTrue,
-BannerString := Concatenation( "Loading SymbCompCC ",
-                               String( ~.Version ), " ...\n" ),
-Autoload := false,
 
 Keywords := ["parametrised presentations for p-groups of fixed coclass and calculations with these"]
 
