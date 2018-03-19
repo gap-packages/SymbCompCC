@@ -428,9 +428,9 @@ InstallImmediateMethod( Order, IsPPPPcpGroups, 0,
           ord := PPP_Mult( ord, expo_vec[i] );
        od;
 
-       Print( "Order of the p-power-poly-pcp-groups: " );
-       PPP_Print( ord );
-       Print( "\n" );
+#        Print( "Order of the p-power-poly-pcp-groups: " );
+#        PPP_Print( ord );
+#        Print( "\n" );
 
        return ord;
    end);
