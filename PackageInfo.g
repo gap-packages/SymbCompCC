@@ -6,8 +6,8 @@
 SetPackageInfo( rec(
 PackageName := "SymbCompCC",
 Subtitle := "Computing with parametrised presentations for p-groups of fixed coclass",
-Version := "1.3dev",
-Date := "19/11/2011",
+Version := "1.3",
+Date := "20/03/2018",
 
 Persons := [
   rec(
@@ -16,7 +16,6 @@ Persons := [
     IsAuthor      := true,
     IsMaintainer  := false,
     Email         := "d.feichtenschlager@tu-braunschweig.de",
-    #WWWHome       := "",
     PostalAddress := Concatenation([
                      "Institut Computational Mathematics\n",
                      "TU Braunschweig\n",
