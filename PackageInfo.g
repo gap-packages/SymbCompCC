@@ -70,7 +70,7 @@ Dependencies := rec(
 ),
 
 AvailabilityTest := ReturnTrue,
-
+TestFile         := "tst/testall.g",
 Keywords := ["parametrised presentations for p-groups of fixed coclass and calculations with these"]
 
 ));
