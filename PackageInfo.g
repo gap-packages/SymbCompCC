@@ -6,8 +6,9 @@
 SetPackageInfo( rec(
 PackageName := "SymbCompCC",
 Subtitle := "Computing with parametrised presentations for p-groups of fixed coclass",
-Version := "1.3",
-Date := "20/03/2018",
+Version := "1.3.1",
+Date := "27/09/2019", # dd/mm/yyyy format
+License := "GPL-2.0-or-later",
 
 Persons := [
   rec(
@@ -70,7 +71,7 @@ Dependencies := rec(
 ),
 
 AvailabilityTest := ReturnTrue,
-
+TestFile         := "tst/testall.g",
 Keywords := ["parametrised presentations for p-groups of fixed coclass and calculations with these"]
 
 ));
