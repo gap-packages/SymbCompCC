@@ -12,17 +12,17 @@
 ##
 ## define global variables
 ##
-InstallValue( One1_PPGV22, Int2PPowerPoly( 2 , 1 ) );
-InstallValue( Zero0_PPGV22, Int2PPowerPoly( 2 , 0 ) );
-InstallValue( TwoXP1_PPGV22, [ 2, [0,2], true, [1,1] ] );
-InstallValue( TwoXP2_PPGV22, [ 2, [0,4], true, [1,2] ] );
-InstallValue( TwoXP3_PPGV22, [ 2, [0,8], true, [1,3] ] );
-InstallValue( TwoXP4_PPGV22, [ 2, [0,16], true, [1,4] ] );
-InstallValue( TwoXP5_PPGV22, [ 2, [0,32], true, [1,5] ] );
-InstallValue( TwoXP6_PPGV22, [ 2, [0,64], true, [1,6] ] );
-InstallValue( TwoX_PPGV22, [ 2, [0,1], true, [1,0] ] );
+BindGlobal( "One1_PPGV22", Int2PPowerPoly( 2 , 1 ) );
+BindGlobal( "Zero0_PPGV22", Int2PPowerPoly( 2 , 0 ) );
+BindGlobal( "TwoXP1_PPGV22", [ 2, [0,2], true, [1,1] ] );
+BindGlobal( "TwoXP2_PPGV22", [ 2, [0,4], true, [1,2] ] );
+BindGlobal( "TwoXP3_PPGV22", [ 2, [0,8], true, [1,3] ] );
+BindGlobal( "TwoXP4_PPGV22", [ 2, [0,16], true, [1,4] ] );
+BindGlobal( "TwoXP5_PPGV22", [ 2, [0,32], true, [1,5] ] );
+BindGlobal( "TwoXP6_PPGV22", [ 2, [0,64], true, [1,6] ] );
+BindGlobal( "TwoX_PPGV22", [ 2, [0,1], true, [1,0] ] );
 
-InstallValue( ParPresGlobalVar_2_2_Names, [ 
+BindGlobal( "ParPresGlobalVar_2_2_Names", [ 
 "G22_1", 
 "G22_2",
 "G22_3",
@@ -80,7 +80,7 @@ InstallValue( ParPresGlobalVar_2_2_Names, [
 ##
 ## relations and exponents
 ##
-InstallValue( ParPresGlobalVar_2_2, [ 
+BindGlobal( "ParPresGlobalVar_2_2", [ 
 rec( rel := [[[[2,1]]],[[[2,1]],[[2,0]]],[[[3,1],[4,One1_PPGV22],[5,PPP_Subtract(TwoXP2_PPGV22,One1_PPGV22)]],[[3,1],[5,PPP_Subtract(TwoXP2_PPGV22,One1_PPGV22)]],[[5,One1_PPGV22]]], [[[4,One1_PPGV22],[5,PPP_Subtract(TwoXP2_PPGV22,One1_PPGV22)]],[[4,PPP_Subtract(TwoXP2_PPGV22,One1_PPGV22)]],[[4,One1_PPGV22]], [[4,Zero0_PPGV22]]], [[[4,PPP_Add(One1_PPGV22,One1_PPGV22)],[5,PPP_Subtract(TwoXP2_PPGV22,One1_PPGV22)]], [[5,PPP_Subtract(TwoXP2_PPGV22,One1_PPGV22)]],[[5,One1_PPGV22]],[[5,One1_PPGV22]], [[5,Zero0_PPGV22]]] ], 
      expo := TwoXP2_PPGV22, 
      n := 3, 

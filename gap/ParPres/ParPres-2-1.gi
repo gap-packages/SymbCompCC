@@ -12,17 +12,17 @@
 ##
 ## define global variables
 ##
-InstallValue( One1_PPGV21, Int2PPowerPoly( 2, 1 ) );
-InstallValue( Zero0_PPGV21, Int2PPowerPoly( 2, 0 ) );
-InstallValue( TwoXP1_PPGV21, [ 2, [0,2], true, [1,1] ] );
-InstallValue( TwoX_PPGV21, [ 2, [0,1] , true, [1,0] ] );
-InstallValue( ParPresGlobalVar_2_1_Names, [ "D", "Q", "SD" ] );
+BindGlobal( "One1_PPGV21", Int2PPowerPoly( 2, 1 ) );
+BindGlobal( "Zero0_PPGV21", Int2PPowerPoly( 2, 0 ) );
+BindGlobal( "TwoXP1_PPGV21", [ 2, [0,2], true, [1,1] ] );
+BindGlobal( "TwoX_PPGV21", [ 2, [0,1] , true, [1,0] ] );
+BindGlobal( "ParPresGlobalVar_2_1_Names", [ "D", "Q", "SD" ] );
  
 ###############################################################################
 ##
 ## relations and exponents
 ##
-InstallValue( ParPresGlobalVar_2_1, [ 
+BindGlobal( "ParPresGlobalVar_2_1", [ 
 rec( rel := [[[[1,0]]],[[[2,1],[3,PPP_Subtract(TwoXP1_PPGV21,One1_PPGV21)]],[[3,One1_PPGV21]]],[[[3,PPP_Subtract(TwoXP1_PPGV21,One1_PPGV21)]],[[3,One1_PPGV21]],[[3,Zero0_PPGV21]]]], 
      expo := TwoXP1_PPGV21, 
      n := 2, 

@@ -12,12 +12,12 @@
 ##
 ## define global variables
 ##
-InstallValue( One1_PPGV31, Int2PPowerPoly( 3 , 1 ) );
-InstallValue( Zero0_PPGV31, Int2PPowerPoly( 3 , 0 ) );
-InstallValue( ThreeX_PPGV31, [ 3, [0,1], true, [1,0] ] );
-InstallValue( ThreeXP1_PPGV31, [ 3, [0,3], true, [1,1] ] );
+BindGlobal( "One1_PPGV31", Int2PPowerPoly( 3 , 1 ) );
+BindGlobal( "Zero0_PPGV31", Int2PPowerPoly( 3 , 0 ) );
+BindGlobal( "ThreeX_PPGV31", [ 3, [0,1], true, [1,0] ] );
+BindGlobal( "ThreeXP1_PPGV31", [ 3, [0,3], true, [1,1] ] );
 
-InstallValue( ParPresGlobalVar_3_1_Names, [ 
+BindGlobal( "ParPresGlobalVar_3_1_Names", [ 
 "G31_1",
 "G31_2", 
 "G31_3", 
@@ -37,7 +37,7 @@ InstallValue( ParPresGlobalVar_3_1_Names, [
 ##
 ## relations and exponents
 ##
-InstallValue( ParPresGlobalVar_3_1, [ 
+BindGlobal( "ParPresGlobalVar_3_1", [ 
 rec( rel := [[[[1,0]]],[[[2,1],[3,1]],[[4,PPP_Add(One1_PPGV31,One1_PPGV31)],[5,One1_PPGV31]]],[[[3,1],[4,One1_PPGV31]],[[3,1]],[[4,PPP_Subtract(ThreeXP1_PPGV31,PPP_Add(One1_PPGV31,PPP_Add(One1_PPGV31,One1_PPGV31)))],[5,PPP_Subtract(ThreeXP1_PPGV31,One1_PPGV31)]]],[[[4,One1_PPGV31],[5,One1_PPGV31]],[[4,One1_PPGV31]],[[4,One1_PPGV31]],[[4,Zero0_PPGV31]]],[[[4,PPP_Subtract(ThreeXP1_PPGV31,PPP_Add(One1_PPGV31,PPP_Add(One1_PPGV31,One1_PPGV31)))],[5,PPP_Subtract(ThreeXP1_PPGV31,PPP_Add(One1_PPGV31,One1_PPGV31))]],[[5,One1_PPGV31]],[[5,One1_PPGV31]],[[5,One1_PPGV31]],[[5,Zero0_PPGV31]]]], 
      expo := ThreeXP1_PPGV31, 
      n := 3, 
