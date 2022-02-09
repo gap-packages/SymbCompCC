@@ -706,7 +706,7 @@ InstallMethod( Inverse, [ IsPPPPcpGroupsElement ],
 ##
 ## Output: the inverse of obj
 ##
-InstallMethod( INV, [ IsPPPPcpGroupsElement ],
+InstallMethod( InverseMutable, [ IsPPPPcpGroupsElement ],
    function( obj )
       local word, l, i, n;
 
