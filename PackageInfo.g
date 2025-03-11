@@ -61,7 +61,6 @@ HTMLStart := "htm/chapters.htm",
 PDFFile   := "doc/manual.pdf",
 SixFile   := "doc/manual.six",
 LongTitle := "SymbCompCC/Symbolic computation with p-groups of fixed coclass",
-Autoload  := false
 ),
 
 Dependencies := rec(
