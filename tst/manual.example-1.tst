@@ -1,2 +1,0 @@
-gap> LoadPackage("SymbCompCC");
-true

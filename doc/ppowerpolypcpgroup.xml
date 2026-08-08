@@ -1,0 +1,310 @@
+<!-- W ppowerpolypcpgroup.tex  GAP documentation     Dörte Feichtenschlager -->
+<Chapter Label="p-power-poly-pcp-groups">
+<Heading>p-power-poly-pcp-groups</Heading>
+Eick and Leedham-Green <Cite Key="ELG08"/> defined for a prime <A>p</A> and a fixed
+coclass <A>r</A> infinite coclass sequences. These sequences consist of finite 
+<A>p</A>-groups of coclass <A>r</A>. For each infinite coclass sequence there exists a 
+consistent pp-presentation (see 
+Section&nbsp;<Ref Sect="Background on (polycyclic) parametrised presentations"/>) 
+such that if we choose a natural number for the parameter and possibly reduce
+the exponents modulo the relative orders, we obtain a consistent polycyclic 
+presentation for a group in the sequence; and for each group in the sequence 
+there exists a natural number such that using this as a value for the 
+parameter, we obtain a polycyclic presentation for the group.
+<P/>
+We use these consistent pp-presentations to compute parametrised 
+groups, which we call <A>p</A>-power-poly-pcp-groups. Furthermore, methods for 
+these are presented. Without specifying the parameter we compute certain 
+properties and using the <A>p</A>-power-poly-pcp-groups we do this for all groups 
+they represent at once.
+<P/>
+The <A>p</A>-power-poly-pcp-groups have a consistent pp-presentation with 
+generators <M>g_1, \ldots, g_n, t_1, \ldots t_d</M> and <M>c_1, \ldots, c_m</M>, for some 
+non-negative integers <A>n</A>, <A>d</A> and <A>m</A>, and relations of the form, where 
+<M>rel[i,j]</M> stores the right hand sides of the relations (see 
+Section&nbsp;<Ref Sect="Background on (polycyclic) parametrised presentations"/> for more 
+information on pp-presentations),
+<P/>
+<Display>
+\begin{array}{rl}&amp; g_i^p=rel[i,i],\\
+&amp; t_i^{expo} = rel[n+i,n+i],\\
+&amp; c_i^{expo\_vec[i]} = rel[n+d+i,n+d+i],\\
+&amp; g_i^{g_j} = rel[j,i], \\
+&amp; t_i^{g_j} = rel[j,n+i], \\
+&amp; t_i^{t_j} = rel[n+j,n+i],\end{array}
+</Display>
+where the <M>t_i</M>'s commute modulo <M>\langle c_1,\ldots, c_m\rangle</M> and the 
+<M>c_i</M>'s are central. So <A>rel</A> (see Section&nbsp;<Ref Sect="Obtaining p-power-poly-pcp-groups"/>)
+are the right hand sides of the relations, where some depend on the parameter. 
+The relative orders <A>expo</A> and &lt;expo_vec[i]&gt; of the generators <M>t_j</M> and 
+<M>c_i</M> depend on the parameter.
+<Section Label="Example of a p-power-poly-pcp-group">
+<Heading>Example</Heading>
+In this section we present the well-known example of quaternion groups 
+<M>Q_{2^{x+3}}</M>. They have a pp-presentation of the following form:
+<P/>
+<Display>
+\begin{array}{rl}\{ g_1,g_2,t_1 \mid &amp;g_1^{2} = t_1^{2^x}, g_2^{g_1} = g_2
+t_1^{-1+2^{x+1}},\\
+&amp; g_2^{2} = t_1, t_1^{g_1} = t_1^{-1+2^{x+1}},\\
+&amp; t_1^{2^{x+1}} = 1 \}.\end{array}
+</Display>
+</Section>
+<Section Label="Obtaining p-power-poly-pcp-groups">
+<Heading>Obtaining p-power-poly-pcp-groups</Heading>
+To obtain <A>p</A>-power-poly-pcp-groups:
+<ManSection>
+<Func Name="PPPPcpGroups" Arg="rel, n, d, m, expo, expo_vec, prime, cc, name"/>
+<Func Name="PPPPcpGroups" Label="for a record" Arg="rec"/>
+<Description>
+returns the p-power-poly-pcp-groups described by the consistent 
+pp-presentation with generators <M>g_1, \ldots, g_n</M>, <M>t_1, \ldots t_d</M>, 
+<M>c_1, \ldots, c_m</M>, for some non-negative integers <A>n</A>, <A>d</A> and <A>m</A>, and 
+relations of the form
+<P/>
+<Display>
+\begin{array}{rl}&amp; g_i^p=rel[i,i],\\
+&amp; t_i^{expo} = rel[n+i,n+i],\\
+&amp; c_i^{expo\_vec[i]} = rel[n+d+i,n+d+i],\\
+&amp; g_i^{g_j} = rel[j,i], \\
+&amp; t_i^{g_j} = rel[j,n+i], \\
+&amp; t_i^{t_j} = rel[n+j,n+i].\end{array}
+</Display>
+<P/>
+The input consists of the following:
+<List>
+<Mark><C><A>rel</A></C></Mark>
+<Item>is the list of the right hand sides of the relations, where each 
+relation is presented by a list consisting of tuples; the first entry <A>i</A> of 
+a tuple is the index of the generator (if <M>i \le n</M>, then it represents 
+generator <M>g_i</M>, if <M>n &lt; i \le d</M>, then it represents generator <M>t_{i-n}</M> 
+and otherwise it represents generator <M>c_{i-n-d}</M>) and the second entry of 
+the tuple is the corresponding exponent. 
+Note that the exponents of the <M>g_i</M>'s are saved as integers and all other 
+exponents as lists, representing elements depending on the parameter.</Item>
+<Mark><C><A>n</A></C></Mark>
+<Item>is the number of generators <M>g_i</M>,</Item>
+<Mark><C><A>d</A></C></Mark>
+<Item>is the number of generators <M>t_i</M>,</Item>
+<Mark><C><A>m</A></C></Mark>
+<Item>is the number of generators <M>c_i</M>,</Item>
+<Mark><C><A>expo</A></C></Mark>
+<Item>is the relative order of all generators <M>t_i</M>; note that <A>expo</A> is
+a list that represents an element depending on the parameter,</Item>
+<Mark><C><A>expo_vec</A></C></Mark>
+<Item>is the list of relative orders, where the <A>i</A>th entry of the 
+list gives the relative order of the generator <M>c_i</M>; note that each 
+relative order is a list that represents an element depending on the 
+parameter,</Item>
+<Mark><C><A>prime</A></C></Mark>
+<Item>is the underlying prime <A>p</A>,</Item>
+<Mark><C><A>cc</A></C></Mark>
+<Item>if the <A>p</A>-power-poly-pcp-groups represent an infinite coclass
+sequence of <A>p</A>-groups of coclass <A>r</A>, then <A>cc</A> = <A>r</A>. If they represent
+Schur extensions of groups in an infinite coclass sequence, then <A>cc</A> is
+the coclass of the groups in this infinite coclass sequence.</Item>
+<Mark><C><A>name</A></C></Mark>
+<Item>a string to name the <A>p</A>-power-poly-pcp-groups.</Item>
+<Mark><C><A>rec</A></C></Mark>
+<Item>is a record of the form
+&lt;rec( rel, expo, n, d, m, prime, cc, expo_vec, name )&gt;.</Item>
+</List>
+The pp-presentation is described at the beginning of Chapter 
+<Ref Chap="p-power-poly-pcp-groups"/>. Note that the consistency of the presentation is 
+checked and that the presentation has to be consistent.
+<Example><![CDATA[
+gap> ParPresGlobalVar_2_1[1];
+rec( cc := 1, d := 1, expo := [ 2, [ 0, 2 ], true, [ 1, 1 ] ], 
+  expo_vec := [  ], m := 0, n := 2, name := "D", prime := 2, 
+  rel := 
+    [ [ [ [ 1, 0 ] ] ], 
+      [ [ [ 2, 1 ], [ 3, [ 2, [ -1, 2 ], true ] ] ], 
+          [ [ 3, [ 2, [ 1 ], true, [ 0, 0 ] ] ] ] ], 
+      [ [ [ 3, [ 2, [ -1, 2 ], true ] ] ], 
+          [ [ 3, [ 2, [ 1 ], true, [ 0, 0 ] ] ] ], 
+          [ [ 3, [ 2, [  ], true, [ infinity, infinity ] ] ] ] ] ] )
+gap> G := PPPPcpGroups( ParPresGlobalVar_2_1[1] );
+< P-Power-Poly-pcp-groups with 3 generators of relative orders [ 2,2,2*2^x ] >
+]]></Example>
+</Description>
+</ManSection>
+<ManSection>
+<Oper Name="PPPPcpGroupsElement" Arg="G, word"/>
+<Description>
+constructs an element in <A>p</A>-power-poly-pcp-groups, where <A>G</A> is a 
+<A>p</A>-power-poly-pcp-group (thus representing an infinite coclass sequence 
+through a pp-presentation) with generators <M>g_1, \ldots, g_n, t_1, 
+\ldots, t_d, c_1, \ldots, c_m</M> and <A>word</A> is a list of tuples, where the first 
+entry <A>i</A> in the tuple gives the index of the generator (if <M>i \le n</M>, then 
+it represents generator <M>g_i</M>, if <M>n &lt; i \le d</M>, then it represents generator
+<M>t_{i-n}</M> and otherwise it represents generator <M>c_{i-n-d}</M>) and the second 
+entry of the tuple is the corresponding exponent. Note that the exponents 
+of the <M>g_i</M>'s must be integers, while all other exponents can be integers 
+or lists, representing an element depending on the parameter.
+<Example><![CDATA[
+gap> G := PPPPcpGroups( ParPresGlobalVar_2_1[3] );
+< P-Power-Poly-pcp-groups with 3 generators of relative orders [ 2,2,2*2^x ] >
+gap> g1 := PPPPcpGroupsElement( G , [[1,1]] );
+g1
+gap> g := PPPPcpGroupsElement( G , [[1,1],[2,1],[3,1]] );
+g1*g2*t1
+gap> h := PPPPcpGroupsElement( G , [[1,1],[2,1],[3,G!.expo-1]] );
+Error, no method found! For debugging hints type ?Recovery from NoMethodFound
+Error, no 1st choice method found for `+' on 2 arguments
+]]></Example>
+</Description>
+</ManSection>
+</Section>
+<Section Label="Operations and functions for p-power-poly-pcp-group elements">
+<Heading>Operations and functions for p-power-poly-pcp-group elements</Heading>
+The typical operations for group elements can be carried out for 
+<A>p</A>-power-poly-pcp-group elements, like <C>*</C>, <C>/</C>, Inverse, One, equality and 
+ShallowCopy.
+<ManSection>
+<Oper Name="CollectPPPPcp" Arg="a"/>
+<Description>
+collects the <A>p</A>-power-poly-pcp-group element <A>a</A> so that after reducing to
+integers for every specific value for the parameter <A>x</A>, the element is 
+collected in the polycyclic group, represented by <A>x</A> in the underlying 
+pp-presentation.
+<P/>
+Note that the global
+variable <C>COLLECT_PPOWERPOLY_PCP</C> determines whether every element will be 
+collected immediately, when created, or not, see
+ COLLECT_PPOWERPOLY_PCP,
+<Ref Func="COLLECT_PPOWERPOLY_PCP"/>.
+</Description>
+</ManSection>
+</Section>
+<Section Label="Operations and functions for p-power-poly-pcp-groups">
+<Heading>Operations and functions for p-power-poly-pcp-groups</Heading>
+For <A>p</A>-power-poly-pcp-groups:
+<ManSection>
+<Attr Name="GeneratorsOfGroup" Arg="G"/>
+<Description>
+returns a set of generators for the <A>p</A>-power-poly-pcp-groups <A>G</A>.
+</Description>
+</ManSection>
+<ManSection>
+<Attr Name="One" Arg="G"/>
+<Description>
+obtains the identity element of the <A>p</A>-power-poly-pcp-groups <A>G</A>.
+</Description>
+</ManSection>
+<ManSection>
+<Oper Name="IsConsistentPPPPcp" Arg="G"/>
+<Oper Name="IsConsistentPPPPcp" Label="for a parametrised presentation" Arg="ParPres"/>
+<Description>
+checks if the underlying pp-presentation of the 
+<A>p</A>-power-poly-pcp-groups <A>G</A> is consistent or if the pp-presenta-tion 
+<A>ParPres</A> is consistent.
+</Description>
+</ManSection>
+<ManSection>
+<Oper Name="GetPcGroupPPowerPoly" Arg="ParPres, n"/>
+<Oper Name="GetPcGroupPPowerPoly" Label="for a group" Arg="G, n"/>
+<Description>
+takes the pp-presentation given by the record <A>ParPres</A> as in
+ PPPPcpGroups,
+<Ref Func="PPPPcpGroups"/> or the <A>p</A>-power-poly-pcp-groups <A>G</A> and takes <A>n</A>, a 
+non-negative integer, as a value for the parameter to obtain a 
+pc-presentation for the corresponding finite <A>p</A>-group.
+</Description>
+</ManSection>
+<ManSection>
+<Oper Name="GetPcpGroupPPowerPoly" Arg="ParPres, n"/>
+<Oper Name="GetPcpGroupPPowerPoly" Label="for a group" Arg="G, n"/>
+<Description>
+takes pp-presentation given by the record <A>ParPres</A> as in
+ PPPPcpGroups,
+<Ref Func="PPPPcpGroups"/> or the <A>p</A>-power-poly-pcp-groups <A>G</A> and takes <A>n</A>, a 
+non-negative integer, as the parameter to obtain a pcp-presentation for the 
+corresponding finite <A>p</A>-group, for further information we refer to the 
+polycyclic package.
+</Description>
+</ManSection>
+<ManSection>
+<Oper Name="GAPInputPPPPcpGroups" Arg="file, G"/>
+<Oper Name="GAPInputPPPPcpGroups" Label="for a parametrised presentation" Arg="file, ParPres"/>
+<Description>
+prints the <A>p</A>-power-poly-pcp-groups <A>G</A> defined by <A>ParPres</A> in the file 
+<A>file</A> as a record that could be used as input to
+ PPPPcpGroups,
+<Ref Func="PPPPcpGroups"/> to create <A>p</A>-power-poly-pcp-groups.
+</Description>
+</ManSection>
+<ManSection>
+<Oper Name="GAPInputPPPPcpGroupsAppend" Arg="file, G"/>
+<Oper Name="GAPInputPPPPcpGroupsAppend" Label="for a parametrised presentation" Arg="file, ParPres"/>
+<Description>
+appends the pp-presentation of the <A>p</A>-power-poly-pcp-groups <A>G</A> defined by 
+<A>ParPres</A> to the file <A>file</A>  as a record that could be used as input to
+ PPPPcpGroups,
+<Ref Func="PPPPcpGroups"/> to create <A>p</A>-power-poly-pcp-groups.
+</Description>
+</ManSection>
+<ManSection>
+<Oper Name="LatexInputPPPPcpGroups" Arg="file, G"/>
+<Oper Name="LatexInputPPPPcpGroups" Label="for a parametrised presentation" Arg="file, ParPres"/>
+<Description>
+prints the pp-presentation of <A>G</A> as given by <A>ParPres</A> in latex-code to the 
+file <A>file</A>. Note that only non-trivial relations are printed.
+</Description>
+</ManSection>
+<ManSection>
+<Oper Name="LatexInputPPPPcpGroupsAppend" Arg="file, G"/>
+<Oper Name="LatexInputPPPPcpGroupsAppend" Label="for a parametrised presentation" Arg="file, ParPres"/>
+<Description>
+appends the pp-presentation of <A>G</A> as given by <A>ParPres</A> in latex-code to the 
+file <A>file</A>. Note that only non-trivial relations are appended.
+</Description>
+</ManSection>
+<ManSection>
+<Oper Name="LatexInputPPPPcpGroupsAllAppend" Arg="file, G"/>
+<Oper Name="LatexInputPPPPcpGroupsAllAppend" Label="for a parametrised presentation" Arg="file, ParPres"/>
+<Description>
+appends the pp-presentation of <A>G</A> as given by <A>ParPres</A> in latex-code to the 
+file <A>file</A>. Note that all relations are appended.
+</Description>
+</ManSection>
+</Section>
+<Section Label="Info classes for the p-power-poly-pcp-groups">
+<Heading>Info classes for the p-power-poly-pcp-groups</Heading>
+The following info classes are available:
+<ManSection>
+<InfoClass Name="InfoConsistencyPPPPcp"/>
+<Description>
+is an InfoClass with the following levels.
+<List>
+<Mark><C>level 1</C></Mark>
+<Item>displays the first consistency relation that fails during the consistency check;</Item>
+<Mark><C>level 2</C></Mark>
+<Item>displays which family of consistency relations have been checked during a consistency check.</Item>
+</List>
+the default value is 1.
+</Description>
+</ManSection>
+<ManSection>
+<InfoClass Name="InfoCollectingPPPPcp"/>
+<Description>
+is an InfoClass with the following levels.
+<List>
+<Mark><C>level 1</C></Mark>
+<Item>displays some information during collecting;</Item>
+</List>
+the default value is 0.
+</Description>
+</ManSection>
+</Section>
+<Section Label="Global variables for the p-power-poly-pcp-groups">
+<Heading>Global variables for the p-power-poly-pcp-groups</Heading>
+The following global variables are available with default value:
+<ManSection>
+<Var Name="COLLECT_PPOWERPOLY_PCP"/>
+<Description>
+is a global variable determining if every <A>p</A>-power-poly-pcp-group
+element is collected, when created, the default value is true.
+</Description>
+</ManSection>
+</Section>
+</Chapter>

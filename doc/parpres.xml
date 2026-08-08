@@ -1,0 +1,32 @@
+<!-- W  parpres.tex           GAP documentation      Dörte Feichtenschlager -->
+<Chapter Label="Parametrised Presentations">
+<Heading>Parametrised Presentations</Heading>
+In this chapter we describe which pp-presentations for infinite
+coclass sequences (see <Cite Key="ELG08"/>) are provided.
+<Section Label="Provided pp-presentations">
+<Heading>Provided pp-presentations</Heading>
+<ManSection>
+<Var Name="ParPresGlobalVar_2_1"/>
+<Var Name="ParPresGlobalVar_2_2"/>
+<Var Name="ParPresGlobalVar_3_1"/>
+<Description>
+are lists consisting of the pp-presentations of the infinite 
+coclass sequences of finite <A>p</A>-groups of coclass <A>r</A>, where the first number
+in the name gives the underlying prime and the second the underlying coclass. 
+Each entry in the list is a record 
+<A>rec</A>( <A>rel</A>, <A>expo</A>, <A>n</A>, <A>d</A>, <A>m</A>, <A>prime</A>, <A>cc</A>, <A>expo_vec</A>, <A>name</A> )
+with <A>m</A> = 0 and <A>expo_vec</A> = [ ]. The record entries are of a form such that 
+each record can be used as input for 
+ PPPPcpGroups,
+<Ref Func="PPPPcpGroups"/>. See <Ref Func="PPPPcpGroups"/> for more information.
+</Description>
+</ManSection>
+<ManSection>
+<Var Name="ParPresGlobalVar_p_r_Names"/>
+<Description>
+gives the names of the infinite coclass sequences of finite <A>p</A>-groups of
+coclass <A>r</A>.
+</Description>
+</ManSection>
+</Section>
+</Chapter>

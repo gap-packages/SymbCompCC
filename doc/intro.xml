@@ -1,0 +1,135 @@
+<!-- W  intro.tex              GAP documentation      Dörte Feichtenschlager -->
+<Chapter Label="Introduction">
+<Heading>Introduction</Heading>
+<Section Label="Overview">
+<Heading>Overview</Heading>
+The coclass of a finite <M>p</M>-group of order <M>p^n</M> and nilpotency class <M>c</M> is 
+defined as <M>n-c</M>. This invariant of finite <M>p</M>-groups has been introduced by
+Leedham-Green and Newman in <Cite Key="LGN80"/> and it became of major importance
+in <M>p</M>-group theory.
+<P/>
+A first tool in the classification of all <M>p</M>-groups of coclass <M>r</M> is the
+coclass graph <M>G(p,r)</M>. Its vertices are the isomorphism types of finite 
+<M>p</M>-groups of coclass <M>r</M>. Two vertices <M>G</M> and <M>H</M> are joined by an edge if
+<M>G</M> is isomorphic to the quotient <M>H/\gamma(H)</M> where <M>\gamma(H)</M> is the last
+non-trivial term of the lower series of <M>H</M>.
+<P/>
+Du Sautoy <Cite Key="dS00"/> and Eick and Leedham-Green <Cite Key="ELG08"/> proved that
+<M>G(p,r)</M> contains certain periodic patterns. Eick and Leedham-Green 
+<Cite Key="ELG08"/> define infinite coclass sequences of finite <M>p</M>-groups of 
+coclass <M>r</M> which underpin this periodic pattern. In <M>G(2,r)</M> and <M>G(3,1)</M>
+almost all groups are contained in an infinite coclass sequence.
+<P/>
+Eick and Leedham-Green <Cite Key="ELG08"/> also proved that the infinitely many
+<M>p</M>-groups in an infinite coclass sequence can be defined by a single 
+parametrised presentation.
+<P/>
+The first aim of this package is the definition of polycyclic parametrised
+presentations; these are parametrised presentations as defined by Eick
+and Leedham-Green <Cite Key="ELG08"/> and additionally they have various features
+of polycyclic presentations. Each such presentation defines all the 
+infinitely many finite <M>p</M>-groups in an infinite coclass sequence.
+<P/>
+We then provide some algorithms to compute with polycyclic parametrised
+presentations. In particular, we introduce a generalisation of the
+collection algorithm for polycyclic parametrised presentations. Based
+on this, we describe algorithms to compute polycyclic parametrised
+presentations for Schur extensions, for the Schur multiplicator and
+for some low-dimensional cohomology groups. We refer to <Cite Key="EF11"/>
+for details on the underlying algorithms and further references.
+<P/>
+Finally, we exhibit a database of polycyclic parametrised presentations
+for the infinite coclass families of the finite <M>2</M>-groups of coclass at
+most <M>2</M> and the finite <M>3</M>-groups of coclass <M>1</M>.
+</Section>
+<Section Label="Background on (polycyclic) parametrised presentations">
+<Heading>Background on (polycyclic) parametrised presentations</Heading>
+In this section we describe the polycyclic parametrised presentations 
+(pp-presentations) for infinite coclass sequences.
+<P/>
+Let <M>(G_x | x\in &NN;)</M>, where <M>&NN;</M> denotes the natural numbers, be an 
+infinite coclass sequence; <M>x</M> is the parameter of this infinite coclass 
+sequence. Then every group <M>G_x</M> is an extension of a finite <M>p</M>-group <M>P</M> 
+of order <M>p^n</M> by an abelian <M>p</M>-group <M>T_x</M> of rank <M>d</M>. Furthermore, every  
+<M>G_x</M> has a polycyclic presentation (short pp-presentation) on generators 
+<M>g_1, \ldots, g_n, t_1, \ldots, t_d</M> with relations of the form
+<Display>
+\begin{array}{rl}&amp;g_i^{p} = g_{i+1}^{a_{i,i,i+1}} \cdots g_n^{a_{i,i,n}}t_1^{\alpha_{i,i,1}(x)} \cdots t_d^{\alpha_{i,i,d}(x)}, \\
+&amp;g_i^{g_j} = g_{j+1}^{a_{i,j,j+1}} \cdots g_n^{a_{i,j,n}}t_1^{\alpha_{i,j,1}(x)} \cdots t_d^{\alpha_{i,j,d}(x)}, \\
+&amp;t_k^{g_i} = t_1^{b_{k,i,1}(x)} \cdots t_d^{b_{k,i,d}(x)}, \\
+&amp;t_k^{t_l} = t_k, \\
+&amp;t_k^{p^{x+e}} = 1,\end{array}
+</Display>
+where <M>1\le j &lt; i\le n</M> and <M>1 \le k &lt; l\le d</M>; certain <M>a_{i,j,m}\in \{0,
+\ldots, p-1\}</M>, a non-negative integer <M>e</M>, <M>\alpha_{k,l,m}(x)</M> of the form 
+<M>c_{k,l,m}+p^xd_{k,l,m}</M> and <M>b_{k,l,m}</M> with <M>b_{k,l,m},c_{k,l,m},d_{k,l,m}</M> 
+certain <M>p</M>-adic integers. The <M>p</M>-adic exponents arising in the relations
+can be reduced modulo the relative orders of the involved elements and thus 
+can be reduced to integers for every specific <M>x</M>.
+<P/>
+We call such a pp-presentation <M>integral</M> if
+all the <M>p</M>-adic numbers <M>b_{k,l,m}, c_{k,l,m}, d_{k,l,m}</M> are integers.
+Our algorithms introduced in this package compute with integral 
+pp-presentations only.
+<P/>
+We call such an pp-presentation <M>consistent</M> if for every <M>x \in &NN;</M>
+the presentation is consistent as a polycyclic presentation; where we 
+possibly reduce the exponents in the presentation modulo the relative
+orders of the generators.
+</Section>
+<Section Label="Computation of Schur multiplicators">
+<Heading>Computation of Schur multiplicators</Heading>
+In this section we recall briefly the method of <Cite Key="EF11"/> to determine
+the Schur multiplicators of almost all groups <M>G_x</M> in an infinite coclass 
+sequence.
+<P/>
+Suppose we are given a consistent integral pp-presentation <M>F/R_x</M> for the
+groups <M>G_x</M> in an infinite coclass sequence, where <M>F</M> is a free group and
+<M>R_x</M> is generated by parametrised relations as above. Note that the 
+exponents in these relations depend on <M>x</M>, while the number of generators
+and the number of relations does not depend on the parameter.
+<P/>
+Using this presentation we can define a parametrised presentation for the
+Schur extensions <M>G_x^{*} = F/[F,R_x]</M>, corresponding to the parametrised
+presentation <M>F/R_x</M>. The next step is to find the isomorphism types of
+<M>Y_x = R_x/[F,R_x]</M> since <M>M(G_x) \cong (F^\prime \cap R_x)/[F,R_x]</M> are the
+torsion subgroups of <M>Y_x</M> as all <M>G_x</M> are finite <A>p</A>-groups.
+<P/>
+Then <M>Y_x = R_x/[F,R_x]</M> are generated by certain so-called
+consistency relations. Using this we can compute the isomorphism types of
+<M>Y_x</M> and thus the isomorphism types of <M>M(G_x)</M> for almost all <M>G_x</M> in the
+chosen infinite coclass sequence.
+</Section>
+<Section Label="Computation of low-dimensional cohomology">
+<Heading>Computation of low-dimensional cohomology</Heading>
+From the parametrised presentation <M>F/R_x</M> we can see that the Abelian
+invariants are the same for all groups <M>G_x</M> in an infinite coclass sequence,
+and we can compute them. Using this and the computation of the Schur
+multiplicators one obtains <M>H^n(G_x,&ZZ;)</M> and <M>H^n(G_x,GF(p))</M> for <M>0 \le n
+\le 2</M>, where the <M>G_x</M> act trivially on <M>&ZZ;</M> and <M>GF(p)</M>, respectively.
+</Section>
+<Section Label="Example in the introduction">
+<Heading>Example</Heading>
+In this section we present the well-known example of quaternion groups 
+<M>Q_{2^{x+3}}</M>. It is well known that they have a parametrised presentation of 
+the following form:
+<P/>
+<Display>
+\begin{array}{rl}\{ g_1,g_2,t_1 | &amp; g_1^{2} = t_1^{2^x},  g_2^{g_1} = g_2t_1^{-1+2^{x+1}},\\
+&amp; g_2^{2} = t_1,  t_1^{g_1} = t_1^{-1+2^{x+1}},\\
+&amp; t_1^{2^{x+1}} = 1 \}.\end{array}
+</Display>
+<P/>
+Using this we can define the Schur extensions <M>Q_{2^{x+3}}^{*}</M>
+<P/>
+<Display>
+\begin{array}{rl}\{ g_1,g_2,t_1,c_1, c_2, c_3 | &amp;g_1^{2} = t_1^{2^x}c_3,
+  g_2^{g_1} = g_2t_1^{-1+2^{x+1}}c_2^{1-2^{x+1}},\\
+ &amp; g_2^{2} = t_1c_1, t_1^{g_1} = t_1^{-1+2^{x+1}}c_2^{2-2^{x+1}},\\
+ &amp; t_1^{2^{x+1}} = c_2^{2^{x+1}}, \\
+ &amp; c_1,c_2,c_3 \text{ central} \}.\end{array}
+</Display>
+<P/>
+This yields <M>M(Q_{2^{x+3}}) = 1</M>.
+</Section>
+</Chapter>
