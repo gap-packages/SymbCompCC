@@ -127,7 +127,7 @@ Using this we can define the Schur extensions <M>Q_{2^{x+3}}^{*}</M>
   g_2^{g_1} = g_2t_1^{-1+2^{x+1}}c_2^{1-2^{x+1}},\\
  &amp; g_2^{2} = t_1c_1, t_1^{g_1} = t_1^{-1+2^{x+1}}c_2^{2-2^{x+1}},\\
  &amp; t_1^{2^{x+1}} = c_2^{2^{x+1}}, \\
- &amp; c_1,c_2,c_3 \text{ central} \}.\end{array}
+ &amp; c_1,c_2,c_3\ \mathrm{central} \}.\end{array}
 </Display>
 <P/>
 This yields <M>M(Q_{2^{x+3}}) = 1</M>.
