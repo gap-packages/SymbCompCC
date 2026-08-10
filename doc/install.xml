@@ -1,0 +1,44 @@
+<!-- W  install.tex            GAP documentation      Dörte Feichtenschlager -->
+<Chapter Label="Installing and Loading the SymbCompCC Package">
+<Heading>Installing and Loading the SymbCompCC Package</Heading>
+<Section Label="Installing the SymbCompCC Package">
+<Heading>Installing the SymbCompCC Package</Heading>
+The following installation instruction is for unix although the package
+should work as well with any other operating system.
+<P/>
+To install the &SymbCompCC; package, unpack the archive file, which  should
+have a name of the form <C>SymbCompCC-<A>XXX</A>.tar.gz</C> for some version number 
+<A>XXX</A>, by typing
+<Log><![CDATA[
+  bunzip2 SymbCompCC-<XXX>.tar.gz
+  tar -xvf SymbCompCC-<XXX>.tar
+]]></Log>
+in the <C>pkg</C> directory of your version of &GAP;&nbsp;4,  or  in  a  directory
+named <C>pkg</C> (e.g.&nbsp;in your home directory). (The only essential difference
+with installing &SymbCompCC; in a <C>pkg</C> directory different to the &GAP;&nbsp;4
+home directory is that one  must  start  &GAP;  with  the  <C>-l</C>  switch,
+e.g.&nbsp;if your private <C>pkg</C> directory is a subdirectory of <C>mygap</C> in your
+home directory you might type:
+<Log><![CDATA[
+  gap -l ";<myhomedir>/mygap"
+]]></Log>
+where <A>myhomedir</A> is the  path  to  your  home  directory,  which
+may be replaced  by  a  tilde.  The  empty  path  before  the
+semicolon is  filled  in  by  the  default  path  of  the  &GAP;&nbsp;4  home
+directory.)
+</Section>
+<Section Label="Loading the SymbCompCC Package">
+<Heading>Loading the SymbCompCC Package</Heading>
+To use the &SymbCompCC; Package you have to request it explicitly. This  is
+done by calling
+<Example><![CDATA[
+gap> LoadPackage("SymbCompCC");
+true
+]]></Example>
+The <C>LoadPackage</C> command is described  in  Section&nbsp;<Ref Func="LoadPackage" BookName="ref"/>  in
+the &GAP; Reference Manual.
+<P/>
+If you want to load the &SymbCompCC; package by default, you  can  put  the
+<C>LoadPackage</C> command  into  your  <C>.gaprc</C>  file  (see  Section&nbsp;<Ref Subsect="The gaprc file" BookName="ref"/> in the &GAP; Reference Manual).
+</Section>
+</Chapter>
