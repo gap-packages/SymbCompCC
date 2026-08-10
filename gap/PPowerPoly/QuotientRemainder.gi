@@ -1,6 +1,6 @@
 ###############################################################################
 ##
-#F QuotientRemainder.gi      The SymbCompCC package     Dörte Feichtenschlager
+#F QuotientRemainder.gi      The SymbCompCC package     DÃ¶rte Feichtenschlager
 ##
 
 ###############################################################################
