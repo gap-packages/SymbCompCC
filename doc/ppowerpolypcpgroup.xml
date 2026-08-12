@@ -36,7 +36,7 @@ information on pp-presentations),
 where the <M>t_i</M>'s commute modulo <M>\langle c_1,\ldots, c_m\rangle</M> and the 
 <M>c_i</M>'s are central. So <A>rel</A> (see Section&nbsp;<Ref Sect="Obtaining p-power-poly-pcp-groups"/>)
 are the right hand sides of the relations, where some depend on the parameter. 
-The relative orders <A>expo</A> and &lt;expo_vec[i]&gt; of the generators <M>t_j</M> and 
+The relative orders <A>expo</A> and <A>expo_vec[i]</A> of the generators <M>t_j</M> and
 <M>c_i</M> depend on the parameter.
 <Section Label="Example of a p-power-poly-pcp-group">
 <Heading>Example</Heading>
@@ -57,7 +57,7 @@ To obtain <A>p</A>-power-poly-pcp-groups:
 <Func Name="PPPPcpGroups" Arg="rel, n, d, m, expo, expo_vec, prime, cc, name"/>
 <Func Name="PPPPcpGroups" Label="for a record" Arg="rec"/>
 <Description>
-returns the p-power-poly-pcp-groups described by the consistent 
+returns the <A>p</A>-power-poly-pcp-groups described by the consistent
 pp-presentation with generators <M>g_1, \ldots, g_n</M>, <M>t_1, \ldots t_d</M>, 
 <M>c_1, \ldots, c_m</M>, for some non-negative integers <A>n</A>, <A>d</A> and <A>m</A>, and 
 relations of the form
@@ -74,10 +74,10 @@ relations of the form
 The input consists of the following:
 <List>
 <Mark><C><A>rel</A></C></Mark>
-<Item>is the list of the right hand sides of the relations, where each 
-relation is presented by a list consisting of tuples; the first entry <A>i</A> of 
-a tuple is the index of the generator (if <M>i \le n</M>, then it represents 
-generator <M>g_i</M>, if <M>n &lt; i \le d</M>, then it represents generator <M>t_{i-n}</M> 
+<Item>is the list of the right hand sides of the relations, where each
+relation is represented by a list consisting of tuples; the first entry <A>i</A> of
+a tuple is the index of the generator (if <M>i \le n</M>, then it represents
+generator <M>g_i</M>, if <M>n &lt; i \le n+d</M>, then it represents generator <M>t_{i-n}</M>
 and otherwise it represents generator <M>c_{i-n-d}</M>) and the second entry of 
 the tuple is the corresponding exponent. 
 Note that the exponents of the <M>g_i</M>'s are saved as integers and all other 
@@ -107,7 +107,7 @@ the coclass of the groups in this infinite coclass sequence.</Item>
 <Item>a string to name the <A>p</A>-power-poly-pcp-groups.</Item>
 <Mark><C><A>rec</A></C></Mark>
 <Item>is a record of the form
-&lt;rec( rel, expo, n, d, m, prime, cc, expo_vec, name )&gt;.</Item>
+<C>rec( rel, expo, n, d, m, prime, cc, expo_vec, name )</C>.</Item>
 </List>
 The pp-presentation is described at the beginning of Chapter 
 <Ref Chap="p-power-poly-pcp-groups"/>. Note that the consistency of the presentation is 
@@ -135,8 +135,8 @@ constructs an element in <A>p</A>-power-poly-pcp-groups, where <A>G</A> is a
 <A>p</A>-power-poly-pcp-group (thus representing an infinite coclass sequence 
 through a pp-presentation) with generators <M>g_1, \ldots, g_n, t_1, 
 \ldots, t_d, c_1, \ldots, c_m</M> and <A>word</A> is a list of tuples, where the first 
-entry <A>i</A> in the tuple gives the index of the generator (if <M>i \le n</M>, then 
-it represents generator <M>g_i</M>, if <M>n &lt; i \le d</M>, then it represents generator
+entry <A>i</A> in the tuple gives the index of the generator (if <M>i \le n</M>, then
+it represents generator <M>g_i</M>, if <M>n &lt; i \le n+d</M>, then it represents generator
 <M>t_{i-n}</M> and otherwise it represents generator <M>c_{i-n-d}</M>) and the second 
 entry of the tuple is the corresponding exponent. Note that the exponents 
 of the <M>g_i</M>'s must be integers, while all other exponents can be integers 
@@ -171,7 +171,6 @@ pp-presentation.
 Note that the global
 variable <C>COLLECT_PPOWERPOLY_PCP</C> determines whether every element will be 
 collected immediately, when created, or not, see
- COLLECT_PPOWERPOLY_PCP,
 <Ref Func="COLLECT_PPOWERPOLY_PCP"/>.
 </Description>
 </ManSection>
@@ -188,7 +187,7 @@ returns a set of generators for the <A>p</A>-power-poly-pcp-groups <A>G</A>.
 <ManSection>
 <Attr Name="One" Arg="G"/>
 <Description>
-obtains the identity element of the <A>p</A>-power-poly-pcp-groups <A>G</A>.
+returns the identity element of the <A>p</A>-power-poly-pcp-groups <A>G</A>.
 </Description>
 </ManSection>
 <ManSection>
@@ -196,7 +195,7 @@ obtains the identity element of the <A>p</A>-power-poly-pcp-groups <A>G</A>.
 <Oper Name="IsConsistentPPPPcp" Label="for a parametrised presentation" Arg="ParPres"/>
 <Description>
 checks if the underlying pp-presentation of the 
-<A>p</A>-power-poly-pcp-groups <A>G</A> is consistent or if the pp-presenta-tion 
+<A>p</A>-power-poly-pcp-groups <A>G</A> is consistent or if the pp-presentation
 <A>ParPres</A> is consistent.
 </Description>
 </ManSection>
@@ -205,9 +204,8 @@ checks if the underlying pp-presentation of the
 <Oper Name="GetPcGroupPPowerPoly" Label="for a group" Arg="G, n"/>
 <Description>
 takes the pp-presentation given by the record <A>ParPres</A> as in
- PPPPcpGroups,
-<Ref Func="PPPPcpGroups"/> or the <A>p</A>-power-poly-pcp-groups <A>G</A> and takes <A>n</A>, a 
-non-negative integer, as a value for the parameter to obtain a 
+<Ref Func="PPPPcpGroups"/> or the <A>p</A>-power-poly-pcp-groups <A>G</A> and takes <A>n</A>, a
+non-negative integer, as a value for the parameter to obtain a
 pc-presentation for the corresponding finite <A>p</A>-group.
 </Description>
 </ManSection>
@@ -215,12 +213,11 @@ pc-presentation for the corresponding finite <A>p</A>-group.
 <Oper Name="GetPcpGroupPPowerPoly" Arg="ParPres, n"/>
 <Oper Name="GetPcpGroupPPowerPoly" Label="for a group" Arg="G, n"/>
 <Description>
-takes pp-presentation given by the record <A>ParPres</A> as in
- PPPPcpGroups,
-<Ref Func="PPPPcpGroups"/> or the <A>p</A>-power-poly-pcp-groups <A>G</A> and takes <A>n</A>, a 
-non-negative integer, as the parameter to obtain a pcp-presentation for the 
-corresponding finite <A>p</A>-group, for further information we refer to the 
-polycyclic package.
+takes the pp-presentation given by the record <A>ParPres</A> as in
+<Ref Func="PPPPcpGroups"/> or the <A>p</A>-power-poly-pcp-groups <A>G</A> and takes <A>n</A>, a
+non-negative integer, as the parameter to obtain a pcp-presentation for the
+corresponding finite <A>p</A>-group; for further information we refer to the 
+<Package>polycyclic</Package> package.
 </Description>
 </ManSection>
 <ManSection>
@@ -229,7 +226,6 @@ polycyclic package.
 <Description>
 prints the <A>p</A>-power-poly-pcp-groups <A>G</A> defined by <A>ParPres</A> in the file 
 <A>file</A> as a record that could be used as input to
- PPPPcpGroups,
 <Ref Func="PPPPcpGroups"/> to create <A>p</A>-power-poly-pcp-groups.
 </Description>
 </ManSection>
@@ -238,8 +234,7 @@ prints the <A>p</A>-power-poly-pcp-groups <A>G</A> defined by <A>ParPres</A> in 
 <Oper Name="GAPInputPPPPcpGroupsAppend" Label="for a parametrised presentation" Arg="file, ParPres"/>
 <Description>
 appends the pp-presentation of the <A>p</A>-power-poly-pcp-groups <A>G</A> defined by 
-<A>ParPres</A> to the file <A>file</A>  as a record that could be used as input to
- PPPPcpGroups,
+<A>ParPres</A> to the file <A>file</A> as a record that could be used as input to
 <Ref Func="PPPPcpGroups"/> to create <A>p</A>-power-poly-pcp-groups.
 </Description>
 </ManSection>
@@ -247,7 +242,7 @@ appends the pp-presentation of the <A>p</A>-power-poly-pcp-groups <A>G</A> defin
 <Oper Name="LatexInputPPPPcpGroups" Arg="file, G"/>
 <Oper Name="LatexInputPPPPcpGroups" Label="for a parametrised presentation" Arg="file, ParPres"/>
 <Description>
-prints the pp-presentation of <A>G</A> as given by <A>ParPres</A> in latex-code to the 
+prints the pp-presentation of <A>G</A> as given by <A>ParPres</A> in LaTeX code to the 
 file <A>file</A>. Note that only non-trivial relations are printed.
 </Description>
 </ManSection>
@@ -255,7 +250,7 @@ file <A>file</A>. Note that only non-trivial relations are printed.
 <Oper Name="LatexInputPPPPcpGroupsAppend" Arg="file, G"/>
 <Oper Name="LatexInputPPPPcpGroupsAppend" Label="for a parametrised presentation" Arg="file, ParPres"/>
 <Description>
-appends the pp-presentation of <A>G</A> as given by <A>ParPres</A> in latex-code to the 
+appends the pp-presentation of <A>G</A> as given by <A>ParPres</A> in LaTeX code to the 
 file <A>file</A>. Note that only non-trivial relations are appended.
 </Description>
 </ManSection>
@@ -263,7 +258,7 @@ file <A>file</A>. Note that only non-trivial relations are appended.
 <Oper Name="LatexInputPPPPcpGroupsAllAppend" Arg="file, G"/>
 <Oper Name="LatexInputPPPPcpGroupsAllAppend" Label="for a parametrised presentation" Arg="file, ParPres"/>
 <Description>
-appends the pp-presentation of <A>G</A> as given by <A>ParPres</A> in latex-code to the 
+appends the pp-presentation of <A>G</A> as given by <A>ParPres</A> in LaTeX code to the 
 file <A>file</A>. Note that all relations are appended.
 </Description>
 </ManSection>
@@ -279,9 +274,9 @@ is an InfoClass with the following levels.
 <Mark><C>level 1</C></Mark>
 <Item>displays the first consistency relation that fails during the consistency check;</Item>
 <Mark><C>level 2</C></Mark>
-<Item>displays which family of consistency relations have been checked during a consistency check.</Item>
+<Item>displays which families of consistency relations have been checked during a consistency check.</Item>
 </List>
-the default value is 1.
+The default value is 1.
 </Description>
 </ManSection>
 <ManSection>
@@ -292,7 +287,7 @@ is an InfoClass with the following levels.
 <Mark><C>level 1</C></Mark>
 <Item>displays some information during collecting;</Item>
 </List>
-the default value is 0.
+The default value is 0.
 </Description>
 </ManSection>
 </Section>
@@ -302,8 +297,8 @@ The following global variables are available with default value:
 <ManSection>
 <Var Name="COLLECT_PPOWERPOLY_PCP"/>
 <Description>
-is a global variable determining if every <A>p</A>-power-poly-pcp-group
-element is collected, when created, the default value is true.
+is a global variable determining whether every <A>p</A>-power-poly-pcp-group
+element is collected when created; the default value is true.
 </Description>
 </ManSection>
 </Section>

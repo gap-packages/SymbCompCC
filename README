@@ -2,12 +2,11 @@
 
 This is the README file for the GAP package "SymbCompCC".
 
-This package gives tools to compute with elements in Q[p^x]. These 
-elements are used to give parameter presentations for p-groups of certain 
-coclass and the computation of the Schur extension of these families of 
-groups. 
+This package gives tools to compute with elements in Q[p^x]. These
+elements are used to give parametrised presentations for p-groups of fixed
+coclass, and to compute the Schur extensions of these families of groups.
 
-The  package is distributed with  the main  GAP archive.  
+The package is distributed with the main GAP archive.
 For updates check the package Web page
      https://gap-packages.github.io/SymbCompCC/
   
@@ -18,13 +17,13 @@ Now start GAP and type
 
   LoadPackage("SymbCompCC");
 
-The ``SymbCompCC" package banner should appear on the screen. 
+The "SymbCompCC" package banner should appear on the screen.
 
 For details on how to use the SymbCompCC package see the package
-documentation in the `doc' subdirectory (view either `manual.dvi'  via
-`xdvi' or or `manual.pdf' via a PDF viewer). 
+documentation in the `doc' subdirectory (view either `chap0_mj.html' in a
+browser or `manual.pdf' in a PDF viewer).
 
 This code is released under the GPL version 2 or later (at your preference). 
 For the text of the GPL, please see https://www.gnu.org/licenses/.
 
-  D"orte Feichtenschlager -- 19 November 2011.
+  Dörte Feichtenschlager -- 19 November 2011.

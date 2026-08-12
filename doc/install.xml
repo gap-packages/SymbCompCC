@@ -3,19 +3,19 @@
 <Heading>Installing and Loading the SymbCompCC Package</Heading>
 <Section Label="Installing the SymbCompCC Package">
 <Heading>Installing the SymbCompCC Package</Heading>
-The following installation instruction is for unix although the package
+The following installation instructions are for Unix, although the package
 should work as well with any other operating system.
 <P/>
 To install the &SymbCompCC; package, unpack the archive file, which  should
 have a name of the form <C>SymbCompCC-<A>XXX</A>.tar.gz</C> for some version number 
 <A>XXX</A>, by typing
 <Log><![CDATA[
-  bunzip2 SymbCompCC-<XXX>.tar.gz
+  gunzip SymbCompCC-<XXX>.tar.gz
   tar -xvf SymbCompCC-<XXX>.tar
 ]]></Log>
 in the <C>pkg</C> directory of your version of &GAP;&nbsp;4,  or  in  a  directory
 named <C>pkg</C> (e.g.&nbsp;in your home directory). (The only essential difference
-with installing &SymbCompCC; in a <C>pkg</C> directory different to the &GAP;&nbsp;4
+when installing &SymbCompCC; in a <C>pkg</C> directory different from the &GAP;&nbsp;4
 home directory is that one  must  start  &GAP;  with  the  <C>-l</C>  switch,
 e.g.&nbsp;if your private <C>pkg</C> directory is a subdirectory of <C>mygap</C> in your
 home directory you might type:
@@ -29,7 +29,7 @@ directory.)
 </Section>
 <Section Label="Loading the SymbCompCC Package">
 <Heading>Loading the SymbCompCC Package</Heading>
-To use the &SymbCompCC; Package you have to request it explicitly. This  is
+To use the &SymbCompCC; package you have to request it explicitly. This  is
 done by calling
 <Example><![CDATA[
 gap> LoadPackage("SymbCompCC");
@@ -39,6 +39,6 @@ The <C>LoadPackage</C> command is described  in  Section&nbsp;<Ref Func="LoadPac
 the &GAP; Reference Manual.
 <P/>
 If you want to load the &SymbCompCC; package by default, you  can  put  the
-<C>LoadPackage</C> command  into  your  <C>.gaprc</C>  file  (see  Section&nbsp;<Ref Subsect="The gaprc file" BookName="ref"/> in the &GAP; Reference Manual).
+<C>LoadPackage</C> command  into  your  <C>gaprc</C>  file  (see  Section&nbsp;<Ref Subsect="The gaprc file" BookName="ref"/> in the &GAP; Reference Manual).
 </Section>
 </Chapter>

@@ -13,12 +13,11 @@ coclass sequences (see <Cite Key="ELG08"/>) are provided.
 are lists consisting of the pp-presentations of the infinite 
 coclass sequences of finite <A>p</A>-groups of coclass <A>r</A>, where the first number
 in the name gives the underlying prime and the second the underlying coclass. 
-Each entry in the list is a record 
-<A>rec</A>( <A>rel</A>, <A>expo</A>, <A>n</A>, <A>d</A>, <A>m</A>, <A>prime</A>, <A>cc</A>, <A>expo_vec</A>, <A>name</A> )
-with <A>m</A> = 0 and <A>expo_vec</A> = [ ]. The record entries are of a form such that 
-each record can be used as input for 
- PPPPcpGroups,
-<Ref Func="PPPPcpGroups"/>. See <Ref Func="PPPPcpGroups"/> for more information.
+Each entry in the list is a record
+<C>rec( rel, expo, n, d, m, prime, cc, expo_vec, name )</C>
+with <A>m</A> = 0 and <A>expo_vec</A> = [ ]. The record entries are of a form such that
+each record can be used as input for <Ref Func="PPPPcpGroups"/>; see there for
+more information.
 </Description>
 </ManSection>
 <ManSection>

@@ -10,7 +10,7 @@
 #
 gap> START_TEST("symbcompcc03.tst");
 
-# doc/schurextensions.xml:63-102
+# doc/schurextensions.xml:61-100
 gap> SchurExtParPres( ParPresGlobalVar_2_1[1] );
 rec( cc := fail, d := 1, expo := [ 2, [ 0, 2 ], true, [ 1, 1 ] ], 
   expo_vec := [ [ 2, [ 2 ] ], [ 2, [  ], true, [ infinity, infinity ] ], 
@@ -50,38 +50,38 @@ rec( cc := fail, d := 1, expo := [ 2, [ 0, 2 ], true, [ 1, 1 ] ],
           [ [ 7, [ 2, [ 1 ], true, [ 0, 0 ] ] ] ], 
           [ [ 7, [ 2, [  ], true, [ infinity, infinity ] ] ] ] ] ] )
 
-# doc/schurextensions.xml:115-120
+# doc/schurextensions.xml:113-118
 gap> G := PPPPcpGroups( ParPresGlobalVar_2_1[1] );
 < P-Power-Poly-pcp-groups with 3 generators of relative orders [ 2,2,2*2^x ] >
 gap> AbelianInvariantsMultiplier( G );
 [ [ 2, [ 2 ] ] ]
 
-# doc/schurextensions.xml:130-136
+# doc/schurextensions.xml:126-132
 gap> G := PPPPcpGroups( ParPresGlobalVar_3_1[1] );
 < P-Power-Poly-pcp-groups with 5 generators of relative orders [ 3,3,3,3*3^x,
 3*3^x ] >
 gap> SchurMultiplicatorPPPPcps( G );
 < P-Power-Poly-pcp-groups with 2 generators of relative orders [ 3,9*3^x ] >
 
-# doc/schurextensions.xml:144-149
+# doc/schurextensions.xml:140-145
 gap> G := PPPPcpGroups( ParPresGlobalVar_2_1[1] );
 < P-Power-Poly-pcp-groups with 3 generators of relative orders [ 2,2,2*2^x ] >
 gap> AbelianInvariants( G );
 [ [ 2, [ 1 ], true, [ 0, 0 ] ], [ 2, [ 1 ], true, [ 0, 0 ] ] ]
 
-# doc/schurextensions.xml:162-167
+# doc/schurextensions.xml:158-163
 gap> G := PPPPcpGroups( ParPresGlobalVar_2_1[1] );
 < P-Power-Poly-pcp-groups with 3 generators of relative orders [ 2,2,2*2^x ] >
-gap> ZeroCohomologyPPPPcp( G, 2 );
-Error, Variable: 'ZeroCohomologyPPPPcp' must have a value
+gap> ZeroCohomologyPPPPcps( G, 2 );
+[ 2 ]
 
-# doc/schurextensions.xml:180-185
+# doc/schurextensions.xml:176-181
 gap> G := PPPPcpGroups( ParPresGlobalVar_2_1[1] );
 < P-Power-Poly-pcp-groups with 3 generators of relative orders [ 2,2,2*2^x ] >
 gap> FirstCohomologyPPPPcps( G );
 [  ]
 
-# doc/schurextensions.xml:198-203
+# doc/schurextensions.xml:194-199
 gap> G := PPPPcpGroups( ParPresGlobalVar_2_1[1] );
 < P-Power-Poly-pcp-groups with 3 generators of relative orders [ 2,2,2*2^x ] >
 gap> SecondCohomologyPPPPcps( G, 2 );
