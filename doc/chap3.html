@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>GAP (SymbCompCC) - Chapter 3: p-power-poly-pcp-groups</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="GAPDoc2HTML" />
+<link rel="stylesheet" type="text/css" href="manual.css" />
+<script src="manual.js" type="text/javascript"></script>
+<script type="text/javascript">overwriteStyle();</script>
+</head>
+<body class="chap3"  onload="jscontent()">
+
+
+<div class="chlinktop"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chap3.html">3</a>  <a href="chap4.html">4</a>  <a href="chap5.html">5</a>  <a href="chapBib.html">Bib</a>  <a href="chapInd.html">Ind</a>  </div>
+
+<div class="chlinkprevnexttop">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap2.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap4.html">[Next Chapter]</a>&nbsp;  </div>
+
+<p id="mathjaxlink" class="pcenter"><a href="chap3_mj.html">[MathJax on]</a></p>
+<p><a id="X80796512844B6422" name="X80796512844B6422"></a></p>
+<div class="ChapSects"><a href="chap3.html#X80796512844B6422">3 <span class="Heading">p-power-poly-pcp-groups</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap3.html#X85861B017AEEC50B">3.1 <span class="Heading">Example</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap3.html#X7AFBC5767A4BB170">3.2 <span class="Heading">Obtaining p-power-poly-pcp-groups</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3.html#X87E42D2385A0F8D5">3.2-1 PPPPcpGroups</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3.html#X815F55497D761100">3.2-2 PPPPcpGroupsElement</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap3.html#X8120E7D384FBB3D9">3.3 <span class="Heading">Operations and functions for p-power-poly-pcp-group elements</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3.html#X873EF67B7F88F329">3.3-1 CollectPPPPcp</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap3.html#X7F25E9C68780FD15">3.4 <span class="Heading">Operations and functions for p-power-poly-pcp-groups</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3.html#X79C44528864044C5">3.4-1 GeneratorsOfGroup</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3.html#X8129A6877FFD804B">3.4-2 One</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3.html#X7A1B6CF97ABE37A7">3.4-3 IsConsistentPPPPcp</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3.html#X78B82FE07B01B146">3.4-4 GetPcGroupPPowerPoly</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3.html#X78EFABB27E5BA97E">3.4-5 GetPcpGroupPPowerPoly</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3.html#X7A7857007A857DB4">3.4-6 GAPInputPPPPcpGroups</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3.html#X86B90FA57B6DB9C6">3.4-7 GAPInputPPPPcpGroupsAppend</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3.html#X7AFC01B87D45D152">3.4-8 LatexInputPPPPcpGroups</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3.html#X7C84DE3B805D4B43">3.4-9 LatexInputPPPPcpGroupsAppend</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3.html#X85A1A754813AC8B1">3.4-10 LatexInputPPPPcpGroupsAllAppend</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap3.html#X7F18587285D29978">3.5 <span class="Heading">Info classes for the p-power-poly-pcp-groups</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3.html#X7CE2C725850B5412">3.5-1 InfoConsistencyPPPPcp</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3.html#X844567D879F1D0C1">3.5-2 InfoCollectingPPPPcp</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap3.html#X79F74FC279C51EFB">3.6 <span class="Heading">Global variables for the p-power-poly-pcp-groups</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3.html#X7AE59EAA84FA2DD2">3.6-1 COLLECT_PPOWERPOLY_PCP</a></span>
+</div></div>
+</div>
+
+<h3>3 <span class="Heading">p-power-poly-pcp-groups</span></h3>
+
+<p>Eick and Leedham-Green <a href="chapBib.html#biBELG08">[EL08]</a> defined for a prime <var class="Arg">p</var> and a fixed coclass <var class="Arg">r</var> infinite coclass sequences. These sequences consist of finite <var class="Arg">p</var>-groups of coclass <var class="Arg">r</var>. For each infinite coclass sequence there exists a consistent pp-presentation (see Section <a href="chap2.html#X79D95A5B7E7BA450"><span class="RefLink">2.2</span></a>) such that if we choose a natural number for the parameter and possibly reduce the exponents modulo the relative orders, we obtain a consistent polycyclic presentation for a group in the sequence; and for each group in the sequence there exists a natural number such that using this as a value for the parameter, we obtain a polycyclic presentation for the group.</p>
+
+<p>We use these consistent pp-presentations to compute parametrised groups, which we call <var class="Arg">p</var>-power-poly-pcp-groups. Furthermore, methods for these are presented. Without specifying the parameter we compute certain properties and using the <var class="Arg">p</var>-power-poly-pcp-groups we do this for all groups they represent at once.</p>
+
+<p>The <var class="Arg">p</var>-power-poly-pcp-groups have a consistent pp-presentation with generators <span class="SimpleMath">g_1, ..., g_n, t_1, ... t_d</span> and <span class="SimpleMath">c_1, ..., c_m</span>, for some non-negative integers <var class="Arg">n</var>, <var class="Arg">d</var> and <var class="Arg">m</var>, and relations of the form, where <span class="SimpleMath">rel[i,j]</span> stores the right hand sides of the relations (see Section <a href="chap2.html#X79D95A5B7E7BA450"><span class="RefLink">2.2</span></a> for more information on pp-presentations),</p>
+
+<p class="pcenter">
+\begin{array}{rl}&amp; g_i^p=rel[i,i],\\
+&amp; t_i^{expo} = rel[n+i,n+i],\\
+&amp; c_i^{expo\_vec[i]} = rel[n+d+i,n+d+i],\\
+&amp; g_i^{g_j} = rel[j,i], \\
+&amp; t_i^{g_j} = rel[j,n+i], \\
+&amp; t_i^{t_j} = rel[n+j,n+i],\end{array}
+</p>
+
+<p>where the <span class="SimpleMath">t_i</span>'s commute modulo <span class="SimpleMath">⟨ c_1,..., c_m⟩</span> and the <span class="SimpleMath">c_i</span>'s are central. So <var class="Arg">rel</var> (see Section <a href="chap3.html#X7AFBC5767A4BB170"><span class="RefLink">3.2</span></a>) are the right hand sides of the relations, where some depend on the parameter. The relative orders <var class="Arg">expo</var> and <var class="Arg">expo_vec[i]</var> of the generators <span class="SimpleMath">t_j</span> and <span class="SimpleMath">c_i</span> depend on the parameter.</p>
+
+<p><a id="X85861B017AEEC50B" name="X85861B017AEEC50B"></a></p>
+
+<h4>3.1 <span class="Heading">Example</span></h4>
+
+<p>In this section we present the well-known example of quaternion groups <span class="SimpleMath">Q_2^x+3}</span>. They have a pp-presentation of the following form:</p>
+
+<p class="pcenter">
+\begin{array}{rl}\{ g_1,g_2,t_1 \mid &amp;g_1^{2} = t_1^{2^x}, g_2^{g_1} = g_2
+t_1^{-1+2^{x+1}},\\
+&amp; g_2^{2} = t_1, t_1^{g_1} = t_1^{-1+2^{x+1}},\\
+&amp; t_1^{2^{x+1}} = 1 \}.\end{array}
+</p>
+
+<p><a id="X7AFBC5767A4BB170" name="X7AFBC5767A4BB170"></a></p>
+
+<h4>3.2 <span class="Heading">Obtaining p-power-poly-pcp-groups</span></h4>
+
+<p>To obtain <var class="Arg">p</var>-power-poly-pcp-groups:</p>
+
+<p><a id="X87E42D2385A0F8D5" name="X87E42D2385A0F8D5"></a></p>
+
+<h5>3.2-1 PPPPcpGroups</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PPPPcpGroups</code>( <var class="Arg">rel</var>, <var class="Arg">n</var>, <var class="Arg">d</var>, <var class="Arg">m</var>, <var class="Arg">expo</var>, <var class="Arg">expo_vec</var>, <var class="Arg">prime</var>, <var class="Arg">cc</var>, <var class="Arg">name</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PPPPcpGroups</code>( <var class="Arg">rec</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>returns the <var class="Arg">p</var>-power-poly-pcp-groups described by the consistent pp-presentation with generators <span class="SimpleMath">g_1, ..., g_n</span>, <span class="SimpleMath">t_1, ... t_d</span>, <span class="SimpleMath">c_1, ..., c_m</span>, for some non-negative integers <var class="Arg">n</var>, <var class="Arg">d</var> and <var class="Arg">m</var>, and relations of the form</p>
+
+<p class="pcenter">
+\begin{array}{rl}&amp; g_i^p=rel[i,i],\\
+&amp; t_i^{expo} = rel[n+i,n+i],\\
+&amp; c_i^{expo\_vec[i]} = rel[n+d+i,n+d+i],\\
+&amp; g_i^{g_j} = rel[j,i], \\
+&amp; t_i^{g_j} = rel[j,n+i], \\
+&amp; t_i^{t_j} = rel[n+j,n+i].\end{array}
+</p>
+
+<p>The input consists of the following:</p>
+
+
+<dl>
+<dt><strong class="Mark"><code class="code"><var class="Arg">rel</var></code></strong></dt>
+<dd><p>is the list of the right hand sides of the relations, where each relation is represented by a list consisting of tuples; the first entry <var class="Arg">i</var> of a tuple is the index of the generator (if <span class="SimpleMath">i ≤ n</span>, then it represents generator <span class="SimpleMath">g_i</span>, if <span class="SimpleMath">n &lt; i ≤ n+d</span>, then it represents generator <span class="SimpleMath">t_i-n</span> and otherwise it represents generator <span class="SimpleMath">c_i-n-d</span>) and the second entry of the tuple is the corresponding exponent. Note that the exponents of the <span class="SimpleMath">g_i</span>'s are saved as integers and all other exponents as lists, representing elements depending on the parameter.</p>
+
+</dd>
+<dt><strong class="Mark"><code class="code"><var class="Arg">n</var></code></strong></dt>
+<dd><p>is the number of generators <span class="SimpleMath">g_i</span>,</p>
+
+</dd>
+<dt><strong class="Mark"><code class="code"><var class="Arg">d</var></code></strong></dt>
+<dd><p>is the number of generators <span class="SimpleMath">t_i</span>,</p>
+
+</dd>
+<dt><strong class="Mark"><code class="code"><var class="Arg">m</var></code></strong></dt>
+<dd><p>is the number of generators <span class="SimpleMath">c_i</span>,</p>
+
+</dd>
+<dt><strong class="Mark"><code class="code"><var class="Arg">expo</var></code></strong></dt>
+<dd><p>is the relative order of all generators <span class="SimpleMath">t_i</span>; note that <var class="Arg">expo</var> is a list that represents an element depending on the parameter,</p>
+
+</dd>
+<dt><strong class="Mark"><code class="code"><var class="Arg">expo_vec</var></code></strong></dt>
+<dd><p>is the list of relative orders, where the <var class="Arg">i</var>th entry of the list gives the relative order of the generator <span class="SimpleMath">c_i</span>; note that each relative order is a list that represents an element depending on the parameter,</p>
+
+</dd>
+<dt><strong class="Mark"><code class="code"><var class="Arg">prime</var></code></strong></dt>
+<dd><p>is the underlying prime <var class="Arg">p</var>,</p>
+
+</dd>
+<dt><strong class="Mark"><code class="code"><var class="Arg">cc</var></code></strong></dt>
+<dd><p>if the <var class="Arg">p</var>-power-poly-pcp-groups represent an infinite coclass sequence of <var class="Arg">p</var>-groups of coclass <var class="Arg">r</var>, then <var class="Arg">cc</var> = <var class="Arg">r</var>. If they represent Schur extensions of groups in an infinite coclass sequence, then <var class="Arg">cc</var> is the coclass of the groups in this infinite coclass sequence.</p>
+
+</dd>
+<dt><strong class="Mark"><code class="code"><var class="Arg">name</var></code></strong></dt>
+<dd><p>a string to name the <var class="Arg">p</var>-power-poly-pcp-groups.</p>
+
+</dd>
+<dt><strong class="Mark"><code class="code"><var class="Arg">rec</var></code></strong></dt>
+<dd><p>is a record of the form <code class="code">rec( rel, expo, n, d, m, prime, cc, expo_vec, name )</code>.</p>
+
+</dd>
+</dl>
+<p>The pp-presentation is described at the beginning of Chapter <a href="chap3.html#X80796512844B6422"><span class="RefLink">3</span></a>. Note that the consistency of the presentation is checked and that the presentation has to be consistent.</p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ParPresGlobalVar_2_1[1];</span>
+rec( cc := 1, d := 1, expo := [ 2, [ 0, 2 ], true, [ 1, 1 ] ], 
+  expo_vec := [  ], m := 0, n := 2, name := "D", prime := 2, 
+  rel := 
+    [ [ [ [ 1, 0 ] ] ], 
+      [ [ [ 2, 1 ], [ 3, [ 2, [ -1, 2 ], true ] ] ], 
+          [ [ 3, [ 2, [ 1 ], true, [ 0, 0 ] ] ] ] ], 
+      [ [ [ 3, [ 2, [ -1, 2 ], true ] ] ], 
+          [ [ 3, [ 2, [ 1 ], true, [ 0, 0 ] ] ] ], 
+          [ [ 3, [ 2, [  ], true, [ infinity, infinity ] ] ] ] ] ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G := PPPPcpGroups( ParPresGlobalVar_2_1[1] );</span>
+&lt; P-Power-Poly-pcp-groups with 3 generators of relative orders [ 2,2,2*2^x ] &gt;
+</pre></div>
+
+<p><a id="X815F55497D761100" name="X815F55497D761100"></a></p>
+
+<h5>3.2-2 PPPPcpGroupsElement</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PPPPcpGroupsElement</code>( <var class="Arg">G</var>, <var class="Arg">word</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>constructs an element in <var class="Arg">p</var>-power-poly-pcp-groups, where <var class="Arg">G</var> is a <var class="Arg">p</var>-power-poly-pcp-group (thus representing an infinite coclass sequence through a pp-presentation) with generators <span class="SimpleMath">g_1, ..., g_n, t_1, ..., t_d, c_1, ..., c_m</span> and <var class="Arg">word</var> is a list of tuples, where the first entry <var class="Arg">i</var> in the tuple gives the index of the generator (if <span class="SimpleMath">i ≤ n</span>, then it represents generator <span class="SimpleMath">g_i</span>, if <span class="SimpleMath">n &lt; i ≤ n+d</span>, then it represents generator <span class="SimpleMath">t_i-n</span> and otherwise it represents generator <span class="SimpleMath">c_i-n-d</span>) and the second entry of the tuple is the corresponding exponent. Note that the exponents of the <span class="SimpleMath">g_i</span>'s must be integers, while all other exponents can be integers or lists, representing an element depending on the parameter.</p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G := PPPPcpGroups( ParPresGlobalVar_2_1[3] );</span>
+&lt; P-Power-Poly-pcp-groups with 3 generators of relative orders [ 2,2,2*2^x ] &gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g1 := PPPPcpGroupsElement( G , [[1,1]] );</span>
+g1
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g := PPPPcpGroupsElement( G , [[1,1],[2,1],[3,1]] );</span>
+g1*g2*t1
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">h := PPPPcpGroupsElement( G , [[1,1],[2,1],[3,G!.expo-1]] );</span>
+Error, no method found! For debugging hints type ?Recovery from NoMethodFound
+Error, no 1st choice method found for `+' on 2 arguments
+</pre></div>
+
+<p><a id="X8120E7D384FBB3D9" name="X8120E7D384FBB3D9"></a></p>
+
+<h4>3.3 <span class="Heading">Operations and functions for p-power-poly-pcp-group elements</span></h4>
+
+<p>The typical operations for group elements can be carried out for <var class="Arg">p</var>-power-poly-pcp-group elements, like <code class="code">*</code>, <code class="code">/</code>, Inverse, One, equality and ShallowCopy.</p>
+
+<p><a id="X873EF67B7F88F329" name="X873EF67B7F88F329"></a></p>
+
+<h5>3.3-1 CollectPPPPcp</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; CollectPPPPcp</code>( <var class="Arg">a</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>collects the <var class="Arg">p</var>-power-poly-pcp-group element <var class="Arg">a</var> so that after reducing to integers for every specific value for the parameter <var class="Arg">x</var>, the element is collected in the polycyclic group, represented by <var class="Arg">x</var> in the underlying pp-presentation.</p>
+
+<p>Note that the global variable <code class="code">COLLECT_PPOWERPOLY_PCP</code> determines whether every element will be collected immediately, when created, or not, see <code class="func">COLLECT_PPOWERPOLY_PCP</code> (<a href="chap3.html#X7AE59EAA84FA2DD2"><span class="RefLink">3.6-1</span></a>).</p>
+
+<p><a id="X7F25E9C68780FD15" name="X7F25E9C68780FD15"></a></p>
+
+<h4>3.4 <span class="Heading">Operations and functions for p-power-poly-pcp-groups</span></h4>
+
+<p>For <var class="Arg">p</var>-power-poly-pcp-groups:</p>
+
+<p><a id="X79C44528864044C5" name="X79C44528864044C5"></a></p>
+
+<h5>3.4-1 GeneratorsOfGroup</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GeneratorsOfGroup</code>( <var class="Arg">G</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>returns a set of generators for the <var class="Arg">p</var>-power-poly-pcp-groups <var class="Arg">G</var>.</p>
+
+<p><a id="X8129A6877FFD804B" name="X8129A6877FFD804B"></a></p>
+
+<h5>3.4-2 One</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; One</code>( <var class="Arg">G</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>returns the identity element of the <var class="Arg">p</var>-power-poly-pcp-groups <var class="Arg">G</var>.</p>
+
+<p><a id="X7A1B6CF97ABE37A7" name="X7A1B6CF97ABE37A7"></a></p>
+
+<h5>3.4-3 IsConsistentPPPPcp</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsConsistentPPPPcp</code>( <var class="Arg">G</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsConsistentPPPPcp</code>( <var class="Arg">ParPres</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>checks if the underlying pp-presentation of the <var class="Arg">p</var>-power-poly-pcp-groups <var class="Arg">G</var> is consistent or if the pp-presentation <var class="Arg">ParPres</var> is consistent.</p>
+
+<p><a id="X78B82FE07B01B146" name="X78B82FE07B01B146"></a></p>
+
+<h5>3.4-4 GetPcGroupPPowerPoly</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GetPcGroupPPowerPoly</code>( <var class="Arg">ParPres</var>, <var class="Arg">n</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GetPcGroupPPowerPoly</code>( <var class="Arg">G</var>, <var class="Arg">n</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>takes the pp-presentation given by the record <var class="Arg">ParPres</var> as in <code class="func">PPPPcpGroups</code> (<a href="chap3.html#X87E42D2385A0F8D5"><span class="RefLink">3.2-1</span></a>) or the <var class="Arg">p</var>-power-poly-pcp-groups <var class="Arg">G</var> and takes <var class="Arg">n</var>, a non-negative integer, as a value for the parameter to obtain a pc-presentation for the corresponding finite <var class="Arg">p</var>-group.</p>
+
+<p><a id="X78EFABB27E5BA97E" name="X78EFABB27E5BA97E"></a></p>
+
+<h5>3.4-5 GetPcpGroupPPowerPoly</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GetPcpGroupPPowerPoly</code>( <var class="Arg">ParPres</var>, <var class="Arg">n</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GetPcpGroupPPowerPoly</code>( <var class="Arg">G</var>, <var class="Arg">n</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>takes the pp-presentation given by the record <var class="Arg">ParPres</var> as in <code class="func">PPPPcpGroups</code> (<a href="chap3.html#X87E42D2385A0F8D5"><span class="RefLink">3.2-1</span></a>) or the <var class="Arg">p</var>-power-poly-pcp-groups <var class="Arg">G</var> and takes <var class="Arg">n</var>, a non-negative integer, as the parameter to obtain a pcp-presentation for the corresponding finite <var class="Arg">p</var>-group; for further information we refer to the <strong class="pkg">polycyclic</strong> package.</p>
+
+<p><a id="X7A7857007A857DB4" name="X7A7857007A857DB4"></a></p>
+
+<h5>3.4-6 GAPInputPPPPcpGroups</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GAPInputPPPPcpGroups</code>( <var class="Arg">file</var>, <var class="Arg">G</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GAPInputPPPPcpGroups</code>( <var class="Arg">file</var>, <var class="Arg">ParPres</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>prints the <var class="Arg">p</var>-power-poly-pcp-groups <var class="Arg">G</var> defined by <var class="Arg">ParPres</var> in the file <var class="Arg">file</var> as a record that could be used as input to <code class="func">PPPPcpGroups</code> (<a href="chap3.html#X87E42D2385A0F8D5"><span class="RefLink">3.2-1</span></a>) to create <var class="Arg">p</var>-power-poly-pcp-groups.</p>
+
+<p><a id="X86B90FA57B6DB9C6" name="X86B90FA57B6DB9C6"></a></p>
+
+<h5>3.4-7 GAPInputPPPPcpGroupsAppend</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GAPInputPPPPcpGroupsAppend</code>( <var class="Arg">file</var>, <var class="Arg">G</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GAPInputPPPPcpGroupsAppend</code>( <var class="Arg">file</var>, <var class="Arg">ParPres</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>appends the pp-presentation of the <var class="Arg">p</var>-power-poly-pcp-groups <var class="Arg">G</var> defined by <var class="Arg">ParPres</var> to the file <var class="Arg">file</var> as a record that could be used as input to <code class="func">PPPPcpGroups</code> (<a href="chap3.html#X87E42D2385A0F8D5"><span class="RefLink">3.2-1</span></a>) to create <var class="Arg">p</var>-power-poly-pcp-groups.</p>
+
+<p><a id="X7AFC01B87D45D152" name="X7AFC01B87D45D152"></a></p>
+
+<h5>3.4-8 LatexInputPPPPcpGroups</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LatexInputPPPPcpGroups</code>( <var class="Arg">file</var>, <var class="Arg">G</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LatexInputPPPPcpGroups</code>( <var class="Arg">file</var>, <var class="Arg">ParPres</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>prints the pp-presentation of <var class="Arg">G</var> as given by <var class="Arg">ParPres</var> in LaTeX code to the file <var class="Arg">file</var>. Note that only non-trivial relations are printed.</p>
+
+<p><a id="X7C84DE3B805D4B43" name="X7C84DE3B805D4B43"></a></p>
+
+<h5>3.4-9 LatexInputPPPPcpGroupsAppend</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LatexInputPPPPcpGroupsAppend</code>( <var class="Arg">file</var>, <var class="Arg">G</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LatexInputPPPPcpGroupsAppend</code>( <var class="Arg">file</var>, <var class="Arg">ParPres</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>appends the pp-presentation of <var class="Arg">G</var> as given by <var class="Arg">ParPres</var> in LaTeX code to the file <var class="Arg">file</var>. Note that only non-trivial relations are appended.</p>
+
+<p><a id="X85A1A754813AC8B1" name="X85A1A754813AC8B1"></a></p>
+
+<h5>3.4-10 LatexInputPPPPcpGroupsAllAppend</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LatexInputPPPPcpGroupsAllAppend</code>( <var class="Arg">file</var>, <var class="Arg">G</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LatexInputPPPPcpGroupsAllAppend</code>( <var class="Arg">file</var>, <var class="Arg">ParPres</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>appends the pp-presentation of <var class="Arg">G</var> as given by <var class="Arg">ParPres</var> in LaTeX code to the file <var class="Arg">file</var>. Note that all relations are appended.</p>
+
+<p><a id="X7F18587285D29978" name="X7F18587285D29978"></a></p>
+
+<h4>3.5 <span class="Heading">Info classes for the p-power-poly-pcp-groups</span></h4>
+
+<p>The following info classes are available:</p>
+
+<p><a id="X7CE2C725850B5412" name="X7CE2C725850B5412"></a></p>
+
+<h5>3.5-1 InfoConsistencyPPPPcp</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; InfoConsistencyPPPPcp</code></td><td class="tdright">(&nbsp;info class&nbsp;)</td></tr></table></div>
+<p>is an InfoClass with the following levels.</p>
+
+
+<dl>
+<dt><strong class="Mark"><code class="code">level 1</code></strong></dt>
+<dd><p>displays the first consistency relation that fails during the consistency check;</p>
+
+</dd>
+<dt><strong class="Mark"><code class="code">level 2</code></strong></dt>
+<dd><p>displays which families of consistency relations have been checked during a consistency check.</p>
+
+</dd>
+</dl>
+<p>The default value is 1.</p>
+
+<p><a id="X844567D879F1D0C1" name="X844567D879F1D0C1"></a></p>
+
+<h5>3.5-2 InfoCollectingPPPPcp</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; InfoCollectingPPPPcp</code></td><td class="tdright">(&nbsp;info class&nbsp;)</td></tr></table></div>
+<p>is an InfoClass with the following levels.</p>
+
+
+<dl>
+<dt><strong class="Mark"><code class="code">level 1</code></strong></dt>
+<dd><p>displays some information during collecting;</p>
+
+</dd>
+</dl>
+<p>The default value is 0.</p>
+
+<p><a id="X79F74FC279C51EFB" name="X79F74FC279C51EFB"></a></p>
+
+<h4>3.6 <span class="Heading">Global variables for the p-power-poly-pcp-groups</span></h4>
+
+<p>The following global variables are available with default value:</p>
+
+<p><a id="X7AE59EAA84FA2DD2" name="X7AE59EAA84FA2DD2"></a></p>
+
+<h5>3.6-1 COLLECT_PPOWERPOLY_PCP</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; COLLECT_PPOWERPOLY_PCP</code></td><td class="tdright">(&nbsp;global variable&nbsp;)</td></tr></table></div>
+<p>is a global variable determining whether every <var class="Arg">p</var>-power-poly-pcp-group element is collected when created; the default value is true.</p>
+
+
+<div class="chlinkprevnextbot">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap2.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap4.html">[Next Chapter]</a>&nbsp;  </div>
+
+
+<div class="chlinkbot"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chap3.html">3</a>  <a href="chap4.html">4</a>  <a href="chap5.html">5</a>  <a href="chapBib.html">Bib</a>  <a href="chapInd.html">Ind</a>  </div>
+
+<hr />
+<p class="foot">generated by <a href="https://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc">GAPDoc2HTML</a></p>
+</body>
+</html>

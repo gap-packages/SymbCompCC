@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<title>GAP (SymbCompCC) - Chapter 1: Installing and Loading the SymbCompCC Package</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="GAPDoc2HTML" />
+<link rel="stylesheet" type="text/css" href="manual.css" />
+<script src="manual.js" type="text/javascript"></script>
+<script type="text/javascript">overwriteStyle();</script>
+</head>
+<body class="chap1"  onload="jscontent()">
+
+
+<div class="chlinktop"><span class="chlink1">Goto Chapter: </span><a href="chap0_mj.html">Top</a>  <a href="chap1_mj.html">1</a>  <a href="chap2_mj.html">2</a>  <a href="chap3_mj.html">3</a>  <a href="chap4_mj.html">4</a>  <a href="chap5_mj.html">5</a>  <a href="chapBib_mj.html">Bib</a>  <a href="chapInd_mj.html">Ind</a>  </div>
+
+<div class="chlinkprevnexttop">&nbsp;<a href="chap0_mj.html">[Top of Book]</a>&nbsp;  <a href="chap0_mj.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap0_mj.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap2_mj.html">[Next Chapter]</a>&nbsp;  </div>
+
+<p id="mathjaxlink" class="pcenter"><a href="chap1.html">[MathJax off]</a></p>
+<p><a id="X862F08447E16EDF5" name="X862F08447E16EDF5"></a></p>
+<div class="ChapSects"><a href="chap1_mj.html#X862F08447E16EDF5">1 <span class="Heading">Installing and Loading the SymbCompCC Package</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap1_mj.html#X857EF5DB7EFE9858">1.1 <span class="Heading">Installing the SymbCompCC Package</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap1_mj.html#X79403C59807D0CA5">1.2 <span class="Heading">Loading the SymbCompCC Package</span></a>
+</span>
+</div>
+</div>
+
+<h3>1 <span class="Heading">Installing and Loading the SymbCompCC Package</span></h3>
+
+<p><a id="X857EF5DB7EFE9858" name="X857EF5DB7EFE9858"></a></p>
+
+<h4>1.1 <span class="Heading">Installing the SymbCompCC Package</span></h4>
+
+<p>The following installation instructions are for Unix, although the package should work as well with any other operating system.</p>
+
+<p>To install the <strong class="pkg">SymbCompCC</strong> package, unpack the archive file, which should have a name of the form <code class="code">SymbCompCC-<var class="Arg">XXX</var>.tar.gz</code> for some version number <var class="Arg">XXX</var>, by typing</p>
+
+
+<div class="example"><pre>
+  gunzip SymbCompCC-&lt;XXX&gt;.tar.gz
+  tar -xvf SymbCompCC-&lt;XXX&gt;.tar
+</pre></div>
+
+<p>in the <code class="code">pkg</code> directory of your version of <strong class="pkg">GAP</strong> 4, or in a directory named <code class="code">pkg</code> (e.g. in your home directory). (The only essential difference when installing <strong class="pkg">SymbCompCC</strong> in a <code class="code">pkg</code> directory different from the <strong class="pkg">GAP</strong> 4 home directory is that one must start <strong class="pkg">GAP</strong> with the <code class="code">-l</code> switch, e.g. if your private <code class="code">pkg</code> directory is a subdirectory of <code class="code">mygap</code> in your home directory you might type:</p>
+
+
+<div class="example"><pre>
+  gap -l ";&lt;myhomedir&gt;/mygap"
+</pre></div>
+
+<p>where <var class="Arg">myhomedir</var> is the path to your home directory, which may be replaced by a tilde. The empty path before the semicolon is filled in by the default path of the <strong class="pkg">GAP</strong> 4 home directory.)</p>
+
+<p><a id="X79403C59807D0CA5" name="X79403C59807D0CA5"></a></p>
+
+<h4>1.2 <span class="Heading">Loading the SymbCompCC Package</span></h4>
+
+<p>To use the <strong class="pkg">SymbCompCC</strong> package you have to request it explicitly. This is done by calling</p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LoadPackage("SymbCompCC");</span>
+true
+</pre></div>
+
+<p>The <code class="code">LoadPackage</code> command is described in Section <code class="func">LoadPackage</code> (<a href="https://docs.gap-system.org/doc/ref/chap76_mj.html#X79B373A77B29D1F5"><span class="RefLink">Reference: LoadPackage</span></a>) in the <strong class="pkg">GAP</strong> Reference Manual.</p>
+
+<p>If you want to load the <strong class="pkg">SymbCompCC</strong> package by default, you can put the <code class="code">LoadPackage</code> command into your <code class="code">gaprc</code> file (see Section <a href="https://docs.gap-system.org/doc/ref/chap3_mj.html#X84D4CF587D437C00"><span class="RefLink">Reference: The gaprc file</span></a> in the <strong class="pkg">GAP</strong> Reference Manual).</p>
+
+
+<div class="chlinkprevnextbot">&nbsp;<a href="chap0_mj.html">[Top of Book]</a>&nbsp;  <a href="chap0_mj.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap0_mj.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap2_mj.html">[Next Chapter]</a>&nbsp;  </div>
+
+
+<div class="chlinkbot"><span class="chlink1">Goto Chapter: </span><a href="chap0_mj.html">Top</a>  <a href="chap1_mj.html">1</a>  <a href="chap2_mj.html">2</a>  <a href="chap3_mj.html">3</a>  <a href="chap4_mj.html">4</a>  <a href="chap5_mj.html">5</a>  <a href="chapBib_mj.html">Bib</a>  <a href="chapInd_mj.html">Ind</a>  </div>
+
+<hr />
+<p class="foot">generated by <a href="https://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc">GAPDoc2HTML</a></p>
+</body>
+</html>
