@@ -6,8 +6,8 @@
 SetPackageInfo( rec(
 PackageName := "SymbCompCC",
 Subtitle := "Computing with parametrised presentations for p-groups of fixed coclass",
-Version := "1.3.2",
-Date := "10/02/2022", # dd/mm/yyyy format
+Version := "1.4.0",
+Date := "14/08/2026", # dd/mm/yyyy format
 License := "GPL-2.0-or-later",
 
 Persons := [
