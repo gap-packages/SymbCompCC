@@ -1,37 +1,41 @@
-Version 1.4.0: 2026-08-14
+## 1.4.0 (2026-08-14)
 
-  * Converted the manual to GAPDoc format
-  * Janitorial changes
+* Converted the manual to GAPDoc format
+* Janitorial changes
 
-Version 1.3.2: 2022-02-10
+## 1.3.2 (2022-02-10)
 
-  * Janitorial changes (avoid InstallValue, replace INV -> InverseMutable)
+* Janitorial changes (avoid InstallValue, replace INV -> InverseMutable)
 
-Version 1.3.1: 2019-09-27
+## 1.3.1 (2019-09-27)
 
-  * Janitorial changes (add a test suite, declare license in package meta data)
+* Janitorial changes (add a test suite, declare license in package meta data)
 
-Version 1.3: 2018-03-20
+## 1.3 (2018-03-20)
 
-  * Package is now maintained by the GAP team, and hosted on GitHub
-  * Fix broken GAP version check
-  * Replace SchurMultiplicatorsStructurePPPPcps by standard operation
-    AbelianInvariantsMultiplier
-  * Also rename SchurMultiplicator (formerly provided by polycyclic, but
-    removed there years ago) to SchurMultiplicatorPPPPcps (a new operation)
+* Package is now maintained by the GAP team, and hosted on GitHub
+* Fix broken GAP version check
+* Replace SchurMultiplicatorsStructurePPPPcps by standard operation
+  AbelianInvariantsMultiplier
+* Also rename SchurMultiplicator (formerly provided by polycyclic, but
+  removed there years ago) to SchurMultiplicatorPPPPcps (a new operation)
 
-Version 1.2: 2011/11/19
-  Accepted Version. DF
-  o update bibliography and change status
+## 1.2 (2011-11-19)
 
-Version 1.1: 2011/10/26
-  Report. DF
-  o insert the report comments
+Accepted Version. DF
+- update bibliography and change status
 
-Version 1.0: 2011/03/27
-  Report. DF
-  o insert the report comments
+## 1.1 (2011-10-26)
 
-Version 0.5: 2010/08/05
-  Submission. DF
-  o submission
+Report. DF
+- insert the report comments
+
+## 1.0 (2011-03-27)
+
+Report. DF
+- insert the report comments
+
+## 0.5 (2010-08-05)
+
+Submission. DF
+- submission
